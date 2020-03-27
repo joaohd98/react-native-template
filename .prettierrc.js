@@ -6,4 +6,5 @@ module.exports = {
   quoteProps: 'as-needed',
   bracketSpacing: true,
   arrowParens: 'avoid',
+  endOfLine: 'auto',
 };
