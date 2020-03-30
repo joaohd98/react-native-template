@@ -22,13 +22,15 @@ export default class Layout extends React.PureComponent {
 
     const notArrow = function a() {};
     const teste2 = () => {};
+    const teste3 = () => {};
 
     console.log('aaa');
-    
+
     teste2();
     notArrow();
 
     try {
+      teste3();
       teste2();
     } catch {
       notArrow();
