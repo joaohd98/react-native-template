@@ -17,22 +17,14 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export default class Layout extends React.PureComponent {
-  teste = () => {
-    console.log('aaa');
-  };
-
-  aaaa = () => {
-    console.log('aaa');
-  };
-
   render = () => (
     <>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}
-          >
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}
+        >
           <Header />
           <View style={styles.body}>
             <View style={styles.sectionContainer}>

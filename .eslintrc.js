@@ -23,7 +23,7 @@ module.exports = {
     'no-var': 'error',
     'func-style': ['error', 'expression', { allowArrowFunctions: true }],
     'arrow-body-style': ['error', 'as-needed'],
-    'no-console': ['warn'],
+    'no-console': ['error'],
     'no-multiple-empty-lines': ['error',
       { 'max': 1, 'maxEOF': 0, 'maxBOF': 0 }
     ],
