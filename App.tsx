@@ -30,9 +30,7 @@ export class App {
     if (teste2) {
       teste2();
     }
-
     console.log('aaa');
-
     return (
       <>
         <StatusBar barStyle="dark-content" />
