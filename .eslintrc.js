@@ -11,29 +11,16 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['prettier'],
   rules: {
-    'prettier/prettier': 'error',
     'no-var': 'error',
     'func-style': ['error', 'expression', { allowArrowFunctions: true }],
     'arrow-body-style': ['error', 'as-needed'],
-    'no-console': ['error'],
-    'padding-line-between-statements': [
+    'no-console': ['warn'],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+    'padded-blocks': [
       'error',
-      { blankLine: 'always', prev: '*', next: ['export', 'class'] },
-      {
-        blankLine: 'always',
-        prev: ['singleline-const', 'singleline-let'],
-        next: '*',
-      },
-      {
-        blankLine: 'never',
-        prev: ['singleline-const', 'singleline-let'],
-        next: ['singleline-const', 'singleline-let'],
-      },
-      { blankLine: 'always', prev: 'block-like', next: '*' },
-      { blankLine: 'always', prev: '*', next: 'block-like' },
-      { blankLine: 'always', prev: '*', next: 'return' },
+      { classes: 'always', blocks: 'always' },
+      { allowSingleLineBlocks: true },
     ],
   },
 };

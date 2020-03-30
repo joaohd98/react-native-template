@@ -21,16 +21,14 @@ export class App {
 
   render = () => {
     const notArrow = function a() {};
-
     const teste2 = () => {};
 
     teste2();
+
     notArrow();
 
-    if (teste2) {
-      teste2();
-    }
-    console.log('aaa');
+    if (teste2) teste2();
+
     return (
       <>
         <StatusBar barStyle="dark-content" />
