@@ -44,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint --fix . --ext .tsx"
+      "pre-commit": "eslint --fix . --ext .tsx && npm test"
     }
   }
 }
