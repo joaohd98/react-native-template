@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "husky": "4.2.3",
-    "pretty-quick": "2.0.1",
-    "react": "16.9.0",
-    "react-native": "0.61.5"
+    "prettier": "2.0.2",
+    "react": "16.11.0",
+    "react-native": "0.62.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -25,11 +25,10 @@
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.5.1",
+    "eslint": "5.16.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react-test-renderer": "16.9.0",
-    "prettier": "^1.19.1",
     "typescript": "^3.7.3"
   },
   "jest": {
@@ -45,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "eslint --fix . --ext .tsx & npm test"
     }
   }
 }

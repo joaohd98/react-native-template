@@ -16,18 +16,29 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-export class App {
-  aa = () => {};
+export default class Layout extends React.PureComponent {
 
   render = () => {
+
     const notArrow = function a() {};
     const teste2 = () => {};
+    const testeΩ3 = () => {};
 
     teste2();
-
     notArrow();
 
-    if (teste2) teste2();
+    try {
+      teste2();
+    } catch {
+      notArrow();
+    }
+
+    if (teste2) {
+      teste2();
+    }
+
+    else
+      notArrow();
 
     return (
       <>
@@ -42,8 +53,6 @@ export class App {
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Step One</Text>
                 <Text style={styles.sectionDescription}>
-                  Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                  this screen and then come back to see your edits.
                 </Text>
               </View>
               <View style={styles.sectionContainer}>
@@ -70,7 +79,9 @@ export class App {
         </SafeAreaView>
       </>
     );
+
   };
+
 }
 
 const styles = StyleSheet.create({
@@ -111,5 +122,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;
