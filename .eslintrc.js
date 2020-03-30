@@ -17,7 +17,7 @@ module.exports = {
     'no-var': 'error',
     'func-style': ['error', 'expression', { allowArrowFunctions: true }],
     'arrow-body-style': ['error', 'as-needed'],
-    'no-console': ['warn'],
+    'no-console': ['error'],
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: ['export', 'class'] },
