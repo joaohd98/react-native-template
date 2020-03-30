@@ -17,14 +17,21 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export class App {
+  aa = () => {};
+
   render = () => {
-    const teste = function aaa() {};
+    const notArrow = function a() {};
 
-    const teste1 = () => {};
     const teste2 = () => {};
-    const teste3 = () => {};
 
-    teste1();
+    teste2();
+    notArrow();
+
+    if (teste2) {
+      teste2();
+    }
+
+    console.log('aaa');
 
     return (
       <>
