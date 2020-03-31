@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -16,8 +16,8 @@ module.exports = {
       version: require('./package.json').dependencies.react,
     },
   },
-  extends: ['plugin:react/recommended'],
-  plugins: ['prettier'],
+  extends: ['plugin:react/recommended', "plugin:@typescript-eslint/recommended",],
+  plugins: ['prettier', '@typescript-eslint'],
   rules: {
     'prettier/prettier': 'error',
     'no-var': 'error',
@@ -27,6 +27,7 @@ module.exports = {
     'no-multiple-empty-lines': ['error',
       { 'max': 1, 'maxEOF': 0, 'maxBOF': 0 }
     ],
-    "no-unused-vars": ["error", { "vars": "local", "args": "after-used", "caughtErrors": "all" }]
+    "no-unused-vars": ["error", { "vars": "local", "args": "after-used", "caughtErrors": "all" }],
+    "@typescript-eslint/explicit-function-return-type": "off"
   },
 };
