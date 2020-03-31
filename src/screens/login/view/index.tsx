@@ -1,16 +1,15 @@
 import React from "react";
 import {Text} from "react-native";
-import {bindActionCreators, Dispatch} from "redux";
 import {StatesReducers} from "../../../redux/reducers";
 import {connect} from "react-redux";
-import {LoginInitialState} from "./redux/login-screen-reducer";
+import {Container} from "../../../components/container";
 
 export default class LoginScreen extends React.PureComponent {
   render() {
     const a = "111";
 
     return (
-      <>
+      <Container>
         <Text>{a}</Text>
         <Text>{a}</Text>
         <Text>{a}</Text>
@@ -41,7 +40,7 @@ export default class LoginScreen extends React.PureComponent {
         <Text>{a}</Text>
         <Text>{a}</Text>
         <Text>{a}</Text>
-      </>
+      </Container>
     );
   }
 }
@@ -50,11 +49,12 @@ const mapStateToProps = (state: StatesReducers) => ({
   ...state.loginScreenReducer,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  functions: bindActionCreators(LoginInitialState.functions!, dispatch),
-});
+// const mapDispatchToProps = (dispatch: Dispatch) => ({
+//   functions: bindActionCreators(LoginInitialState.functions!, dispatch),
+// });
 
 export const LoginConnectedScreen = connect(
   mapStateToProps,
-  mapDispatchToProps
+  //mapDispatchToProps
+  null
 )(LoginScreen);

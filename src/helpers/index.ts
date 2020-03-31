@@ -2,6 +2,4 @@
 // import {bindActionCreators, Dispatch} from "redux";
 // import {connect} from "react-redux";
 //
-// export class Helpers {
-//
-// }
+export class Helpers {}
