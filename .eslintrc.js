@@ -16,7 +16,7 @@ module.exports = {
       version: require('./package.json').dependencies.react,
     },
   },
-  extends: ['plugin:react/recommended', "plugin:@typescript-eslint/recommended",],
+  extends: ['plugin:react/recommended', "plugin:@typescript-eslint/recommended", ],
   plugins: ['prettier', '@typescript-eslint'],
   rules: {
     'prettier/prettier': 'error',
@@ -27,7 +27,12 @@ module.exports = {
     'no-multiple-empty-lines': ['error',
       { 'max': 1, 'maxEOF': 0, 'maxBOF': 0 }
     ],
-    "no-unused-vars": ["error", { "vars": "local", "args": "after-used", "caughtErrors": "all" }],
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "no-unused-vars": ["error", {
+      "argsIgnorePattern": "^_",
+      "vars": "local",
+      "args": "after-used",
+      "caughtErrors": "all"
+    }],
+    "@typescript-eslint/explicit-function-return-type": "off",
   },
 };
