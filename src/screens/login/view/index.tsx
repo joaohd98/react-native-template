@@ -1,45 +1,19 @@
 import React from "react";
-import {Text} from "react-native";
 import {StatesReducers} from "../../../redux/reducers";
 import {connect} from "react-redux";
 import {Container} from "../../../components/container";
+import {LoginScreenFormContainer} from "./components/form-container";
+import {LoginScreenInputRaCpf} from "./components/input-ra-cpf";
+import {LoginScreenInputPassword} from "./components/input-password";
 
 export default class LoginScreen extends React.PureComponent {
   render() {
-    const a = "111";
-
     return (
       <Container>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
-        <Text>{a}</Text>
+        <LoginScreenFormContainer>
+          <LoginScreenInputRaCpf />
+          <LoginScreenInputPassword />
+        </LoginScreenFormContainer>
       </Container>
     );
   }

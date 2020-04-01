@@ -20,6 +20,22 @@
 		BF32815D7D3FD3887EF399CA /* libPods-RectNativeTemplate-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB46AC3A33E2F88E17221EB /* libPods-RectNativeTemplate-tvOSTests.a */; };
 		D6920E9D4346ACB52A5C29E8 /* libPods-RectNativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6313005AAFFFA8AF1155412 /* libPods-RectNativeTemplate.a */; };
 		FE98C475FFC0C497193DA3CD /* libPods-RectNativeTemplate-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D34487DF4D794EB1D2DE870 /* libPods-RectNativeTemplate-tvOS.a */; };
+		7E684BD30A32400DAE05FFB7 /* GothamHTF-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */; };
+		DD24A3D125054256A6D42538 /* GothamHTF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */; };
+		D0AF058FA2DE4D698290ABDC /* GothamHTF-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */; };
+		36FA3760506849C6B9195638 /* GothamHTF-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */; };
+		AEF0D228EC264CAC8BB5C34C /* GothamHTF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */; };
+		66CB2194E92A486CBD22FE9D /* GothamHTF-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */; };
+		804EB7CC8A664ABCB221FB15 /* GothamHTF-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */; };
+		8C67D2320DCE491BA3D99A07 /* MetronicSlabProAir.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */; };
+		E2EC6269E9EE4ABA813F49E7 /* MetronicSlabProBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */; };
+		CED0BB6CCCF04F75B01BDEE7 /* MetronicSlabProBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23BE94683A764B548120C47D /* MetronicSlabProBold.otf */; };
+		777B57D1A17143F0B1D84991 /* MetronicSlabProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */; };
+		E1848992B9914A34BFD4C2B6 /* MetronicSlabProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */; };
+		00C2DC766477493C83C02752 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */; };
+		57E21E6E15624B6E8FF8FB6C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */; };
+		446B7A74B1D848299D335BF3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */; };
+		E96F51472CAD4CF1B605E5CF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +83,22 @@
 		D6313005AAFFFA8AF1155412 /* libPods-RectNativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RectNativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */ = {isa = PBXFileReference; name = "GothamHTF-Black.otf"; path = "../src/assets/fonts/GothamHTF-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */ = {isa = PBXFileReference; name = "GothamHTF-Bold.otf"; path = "../src/assets/fonts/GothamHTF-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */ = {isa = PBXFileReference; name = "GothamHTF-Book.otf"; path = "../src/assets/fonts/GothamHTF-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */ = {isa = PBXFileReference; name = "GothamHTF-Light.otf"; path = "../src/assets/fonts/GothamHTF-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */ = {isa = PBXFileReference; name = "GothamHTF-Medium.otf"; path = "../src/assets/fonts/GothamHTF-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */ = {isa = PBXFileReference; name = "GothamHTF-Thin.otf"; path = "../src/assets/fonts/GothamHTF-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */ = {isa = PBXFileReference; name = "GothamHTF-Ultra.otf"; path = "../src/assets/fonts/GothamHTF-Ultra.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */ = {isa = PBXFileReference; name = "MetronicSlabProAir.otf"; path = "../src/assets/fonts/MetronicSlabProAir.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */ = {isa = PBXFileReference; name = "MetronicSlabProBlack.otf"; path = "../src/assets/fonts/MetronicSlabProBlack.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23BE94683A764B548120C47D /* MetronicSlabProBold.otf */ = {isa = PBXFileReference; name = "MetronicSlabProBold.otf"; path = "../src/assets/fonts/MetronicSlabProBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */ = {isa = PBXFileReference; name = "MetronicSlabProLight.otf"; path = "../src/assets/fonts/MetronicSlabProLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */ = {isa = PBXFileReference; name = "MetronicSlabProRegular.otf"; path = "../src/assets/fonts/MetronicSlabProRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +197,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				88E87F99F9737DBB0FF53CC2 /* Pods */,
+				616D70399664464EBBDAE64A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +230,30 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		616D70399664464EBBDAE64A /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */,
+				E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */,
+				80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */,
+				A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */,
+				860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */,
+				5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */,
+				9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */,
+				79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */,
+				419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */,
+				23BE94683A764B548120C47D /* MetronicSlabProBold.otf */,
+				6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */,
+				1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */,
+				67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */,
+				0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */,
+				1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */,
+				97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +342,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +395,22 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				7E684BD30A32400DAE05FFB7 /* GothamHTF-Black.otf in Resources */,
+				DD24A3D125054256A6D42538 /* GothamHTF-Bold.otf in Resources */,
+				D0AF058FA2DE4D698290ABDC /* GothamHTF-Book.otf in Resources */,
+				36FA3760506849C6B9195638 /* GothamHTF-Light.otf in Resources */,
+				AEF0D228EC264CAC8BB5C34C /* GothamHTF-Medium.otf in Resources */,
+				66CB2194E92A486CBD22FE9D /* GothamHTF-Thin.otf in Resources */,
+				804EB7CC8A664ABCB221FB15 /* GothamHTF-Ultra.otf in Resources */,
+				8C67D2320DCE491BA3D99A07 /* MetronicSlabProAir.otf in Resources */,
+				E2EC6269E9EE4ABA813F49E7 /* MetronicSlabProBlack.otf in Resources */,
+				CED0BB6CCCF04F75B01BDEE7 /* MetronicSlabProBold.otf in Resources */,
+				777B57D1A17143F0B1D84991 /* MetronicSlabProLight.otf in Resources */,
+				E1848992B9914A34BFD4C2B6 /* MetronicSlabProRegular.otf in Resources */,
+				00C2DC766477493C83C02752 /* Roboto-Black.ttf in Resources */,
+				57E21E6E15624B6E8FF8FB6C /* Roboto-Light.ttf in Resources */,
+				446B7A74B1D848299D335BF3 /* Roboto-Regular.ttf in Resources */,
+				E96F51472CAD4CF1B605E5CF /* Roboto-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

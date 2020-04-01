@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  Dimensions,
-} from "react-native";
+import {Dimensions} from "react-native";
 import {ContainerStyle} from "./styles";
 import {PropsGlobal} from "../../helpers/props-global";
 
