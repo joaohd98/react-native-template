@@ -1,3 +1,3 @@
 export interface PropsGlobal {
-  children: Element;
+  children: JSX.Element[] | JSX.Element;
 }

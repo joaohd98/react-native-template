@@ -1,7 +1,10 @@
 import React from "react";
+import {PropsGlobal} from "../../../../../helpers/props-global";
 
-export class FormContainer extends React.Component{
-  // render = () = (
-  //
-  // )
+interface Props extends PropsGlobal {
+  submitForm: () => void;
+}
+
+export class FormContainer extends React.Component<Props> {
+  render = () => <></>;
 }

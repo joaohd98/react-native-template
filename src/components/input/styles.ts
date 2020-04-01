@@ -9,5 +9,5 @@ export const InputComponentStyle = {
   `,
   LabelError: styled.Text`
     width: 100%;
-  `
+  `,
 };
