@@ -8,12 +8,14 @@ import {RoutesName} from "../routes/routes-name";
 import {StackPureNavigator} from "../components/stack-pure-navigator";
 import {LoggedRoutes} from "../routes/logged-routes";
 import {createStackNavigator} from "@react-navigation/stack";
+import {StatusBar} from "react-native";
 
 const Stack = createStackNavigator();
 const {loggedRoutes, guestRoutes} = RoutesName;
 
 export const Layout = () => (
   <Provider store={store}>
+    <StatusBar barStyle="dark-content" />
     <PersistGate loading={null} persistor={persistor}>
       <NavigationContainer>
         <StackPureNavigator initialRouteName={RoutesName.guestRoutes}>

@@ -5,10 +5,7 @@ import {FooterButton} from "../../../../../components/footer-button";
 
 export class LoginScreenFormFooter extends React.PureComponent {
   render = () => {
-    const {
-      ForgotPasswordButton,
-      ForgotPasswordText,
-    } = LoginScreenFormFooterStyles;
+    const {ForgotPasswordButton, ForgotPasswordText} = LoginScreenFormFooterStyles;
     const {forgotPassword, footerText} = LoginScreenFormFooterConst;
 
     return (

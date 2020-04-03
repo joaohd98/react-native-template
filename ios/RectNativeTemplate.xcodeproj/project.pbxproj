@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00C2DC766477493C83C02752 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */; };
 		00E356F31AD99517003FC87E /* RectNativeTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RectNativeTemplateTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
@@ -16,26 +17,25 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RectNativeTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RectNativeTemplateTests.m */; };
-		AB44128BF70230322E382568 /* libPods-RectNativeTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD91F42BAF882F3732131602 /* libPods-RectNativeTemplateTests.a */; };
-		BF32815D7D3FD3887EF399CA /* libPods-RectNativeTemplate-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB46AC3A33E2F88E17221EB /* libPods-RectNativeTemplate-tvOSTests.a */; };
-		D6920E9D4346ACB52A5C29E8 /* libPods-RectNativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6313005AAFFFA8AF1155412 /* libPods-RectNativeTemplate.a */; };
-		FE98C475FFC0C497193DA3CD /* libPods-RectNativeTemplate-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D34487DF4D794EB1D2DE870 /* libPods-RectNativeTemplate-tvOS.a */; };
-		7E684BD30A32400DAE05FFB7 /* GothamHTF-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */; };
-		DD24A3D125054256A6D42538 /* GothamHTF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */; };
-		D0AF058FA2DE4D698290ABDC /* GothamHTF-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */; };
 		36FA3760506849C6B9195638 /* GothamHTF-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */; };
-		AEF0D228EC264CAC8BB5C34C /* GothamHTF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */; };
+		446B7A74B1D848299D335BF3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */; };
+		57E21E6E15624B6E8FF8FB6C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */; };
 		66CB2194E92A486CBD22FE9D /* GothamHTF-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */; };
+		777B57D1A17143F0B1D84991 /* MetronicSlabProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */; };
+		7E684BD30A32400DAE05FFB7 /* GothamHTF-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */; };
 		804EB7CC8A664ABCB221FB15 /* GothamHTF-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */; };
 		8C67D2320DCE491BA3D99A07 /* MetronicSlabProAir.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */; };
-		E2EC6269E9EE4ABA813F49E7 /* MetronicSlabProBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */; };
+		AB44128BF70230322E382568 /* libPods-RectNativeTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD91F42BAF882F3732131602 /* libPods-RectNativeTemplateTests.a */; };
+		AEF0D228EC264CAC8BB5C34C /* GothamHTF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */; };
+		BF32815D7D3FD3887EF399CA /* libPods-RectNativeTemplate-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB46AC3A33E2F88E17221EB /* libPods-RectNativeTemplate-tvOSTests.a */; };
 		CED0BB6CCCF04F75B01BDEE7 /* MetronicSlabProBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23BE94683A764B548120C47D /* MetronicSlabProBold.otf */; };
-		777B57D1A17143F0B1D84991 /* MetronicSlabProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */; };
+		D0AF058FA2DE4D698290ABDC /* GothamHTF-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */; };
+		D6920E9D4346ACB52A5C29E8 /* libPods-RectNativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6313005AAFFFA8AF1155412 /* libPods-RectNativeTemplate.a */; };
+		DD24A3D125054256A6D42538 /* GothamHTF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */; };
 		E1848992B9914A34BFD4C2B6 /* MetronicSlabProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */; };
-		00C2DC766477493C83C02752 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */; };
-		57E21E6E15624B6E8FF8FB6C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */; };
-		446B7A74B1D848299D335BF3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */; };
+		E2EC6269E9EE4ABA813F49E7 /* MetronicSlabProBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */; };
 		E96F51472CAD4CF1B605E5CF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */; };
+		FE98C475FFC0C497193DA3CD /* libPods-RectNativeTemplate-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D34487DF4D794EB1D2DE870 /* libPods-RectNativeTemplate-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 		00E356EE1AD99517003FC87E /* RectNativeTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RectNativeTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RectNativeTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RectNativeTemplateTests.m; sourceTree = "<group>"; };
+		0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RectNativeTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RectNativeTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RectNativeTemplate/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RectNativeTemplate/AppDelegate.m; sourceTree = "<group>"; };
@@ -67,38 +68,37 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RectNativeTemplate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RectNativeTemplate/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RectNativeTemplate/main.m; sourceTree = "<group>"; };
+		1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MetronicSlabProRegular.otf; path = ../src/assets/fonts/MetronicSlabProRegular.otf; sourceTree = "<group>"; };
+		1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1EF474EDD850FD60D19529AD /* Pods-RectNativeTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplateTests/Pods-RectNativeTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23BE94683A764B548120C47D /* MetronicSlabProBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MetronicSlabProBold.otf; path = ../src/assets/fonts/MetronicSlabProBold.otf; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RectNativeTemplate-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RectNativeTemplate-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RectNativeTemplate-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RectNativeTemplate-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F24B8A5C44B6E543B350E08 /* Pods-RectNativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplate/Pods-RectNativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MetronicSlabProBlack.otf; path = ../src/assets/fonts/MetronicSlabProBlack.otf; sourceTree = "<group>"; };
+		5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Thin.otf"; path = "../src/assets/fonts/GothamHTF-Thin.otf"; sourceTree = "<group>"; };
 		5D34487DF4D794EB1D2DE870 /* libPods-RectNativeTemplate-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RectNativeTemplate-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F3837BECF3C670178A7D61 /* Pods-RectNativeTemplate-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplate-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplate-tvOSTests/Pods-RectNativeTemplate-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Black.otf"; path = "../src/assets/fonts/GothamHTF-Black.otf"; sourceTree = "<group>"; };
 		6CB46AC3A33E2F88E17221EB /* libPods-RectNativeTemplate-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RectNativeTemplate-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MetronicSlabProLight.otf; path = ../src/assets/fonts/MetronicSlabProLight.otf; sourceTree = "<group>"; };
 		70D774718A1C92415AB2BFD8 /* Pods-RectNativeTemplate-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplate-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplate-tvOSTests/Pods-RectNativeTemplate-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MetronicSlabProAir.otf; path = ../src/assets/fonts/MetronicSlabProAir.otf; sourceTree = "<group>"; };
 		7EF919AEE07233FD09B64096 /* Pods-RectNativeTemplate-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplate-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplate-tvOS/Pods-RectNativeTemplate-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Book.otf"; path = "../src/assets/fonts/GothamHTF-Book.otf"; sourceTree = "<group>"; };
+		860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Medium.otf"; path = "../src/assets/fonts/GothamHTF-Medium.otf"; sourceTree = "<group>"; };
 		8AB1B9D6132F30AE925D4A8D /* Pods-RectNativeTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplateTests/Pods-RectNativeTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Ultra.otf"; path = "../src/assets/fonts/GothamHTF-Ultra.otf"; sourceTree = "<group>"; };
+		97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		9BB2418783CAE5CB0BDB6E25 /* Pods-RectNativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplate/Pods-RectNativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Light.otf"; path = "../src/assets/fonts/GothamHTF-Light.otf"; sourceTree = "<group>"; };
 		B697506AB8715DCC441E5376 /* Pods-RectNativeTemplate-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RectNativeTemplate-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RectNativeTemplate-tvOS/Pods-RectNativeTemplate-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CD91F42BAF882F3732131602 /* libPods-RectNativeTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RectNativeTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6313005AAFFFA8AF1155412 /* libPods-RectNativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RectNativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamHTF-Bold.otf"; path = "../src/assets/fonts/GothamHTF-Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */ = {isa = PBXFileReference; name = "GothamHTF-Black.otf"; path = "../src/assets/fonts/GothamHTF-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */ = {isa = PBXFileReference; name = "GothamHTF-Bold.otf"; path = "../src/assets/fonts/GothamHTF-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */ = {isa = PBXFileReference; name = "GothamHTF-Book.otf"; path = "../src/assets/fonts/GothamHTF-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */ = {isa = PBXFileReference; name = "GothamHTF-Light.otf"; path = "../src/assets/fonts/GothamHTF-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */ = {isa = PBXFileReference; name = "GothamHTF-Medium.otf"; path = "../src/assets/fonts/GothamHTF-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */ = {isa = PBXFileReference; name = "GothamHTF-Thin.otf"; path = "../src/assets/fonts/GothamHTF-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */ = {isa = PBXFileReference; name = "GothamHTF-Ultra.otf"; path = "../src/assets/fonts/GothamHTF-Ultra.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */ = {isa = PBXFileReference; name = "MetronicSlabProAir.otf"; path = "../src/assets/fonts/MetronicSlabProAir.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */ = {isa = PBXFileReference; name = "MetronicSlabProBlack.otf"; path = "../src/assets/fonts/MetronicSlabProBlack.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		23BE94683A764B548120C47D /* MetronicSlabProBold.otf */ = {isa = PBXFileReference; name = "MetronicSlabProBold.otf"; path = "../src/assets/fonts/MetronicSlabProBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */ = {isa = PBXFileReference; name = "MetronicSlabProLight.otf"; path = "../src/assets/fonts/MetronicSlabProLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */ = {isa = PBXFileReference; name = "MetronicSlabProRegular.otf"; path = "../src/assets/fonts/MetronicSlabProRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +181,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		616D70399664464EBBDAE64A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */,
+				E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */,
+				80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */,
+				A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */,
+				860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */,
+				5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */,
+				9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */,
+				79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */,
+				419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */,
+				23BE94683A764B548120C47D /* MetronicSlabProBold.otf */,
+				6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */,
+				1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */,
+				67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */,
+				0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */,
+				1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */,
+				97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,33 +250,8 @@
 				1EF474EDD850FD60D19529AD /* Pods-RectNativeTemplateTests.debug.xcconfig */,
 				8AB1B9D6132F30AE925D4A8D /* Pods-RectNativeTemplateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		616D70399664464EBBDAE64A /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				691FBB0D4D0F441E833ED1E0 /* GothamHTF-Black.otf */,
-				E897050C02FF4ABABECA0A7F /* GothamHTF-Bold.otf */,
-				80F2428F6DE148A490282E45 /* GothamHTF-Book.otf */,
-				A9DBD6D7FD174AA5AEFDE18D /* GothamHTF-Light.otf */,
-				860D3608A93E464CA8F5E363 /* GothamHTF-Medium.otf */,
-				5588C386CE3C4F109FF485C0 /* GothamHTF-Thin.otf */,
-				9489F84DAD3740019F319242 /* GothamHTF-Ultra.otf */,
-				79F11CB423804A31B53828B4 /* MetronicSlabProAir.otf */,
-				419EC9DDDB12485199413A69 /* MetronicSlabProBlack.otf */,
-				23BE94683A764B548120C47D /* MetronicSlabProBold.otf */,
-				6DB27920D17C4EECB52BBDF1 /* MetronicSlabProLight.otf */,
-				1B573B5EF681475B8CE7029D /* MetronicSlabProRegular.otf */,
-				67979F374CF640D9BD91BB88 /* Roboto-Black.ttf */,
-				0F6CE1D04A9048EDADCDFBC9 /* Roboto-Light.ttf */,
-				1BBCCF0FD244455F8B551523 /* Roboto-Regular.ttf */,
-				97F169806B824799A61B1AC9 /* Roboto-Thin.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -365,6 +363,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

@@ -1,5 +1,7 @@
+import {FormInput} from "../../../../validation/form-input";
+
 export interface LoginScreenState {
-  raCPf: string;
-  password: string;
+  raCpf: FormInput;
+  password: FormInput;
   status: string;
 }
