@@ -3,9 +3,9 @@ export const Fonts = {
     black: "GothamHTF-Black",
     bold: "GothamHTF-Bold",
     light: "GothamHTF-Light",
-    Medium: "GothamHTF-Medium",
-    Thin: "GothamHTF-Thin",
-    Ultra: "GothamHTF-Ultra",
+    medium: "GothamHTF-Medium",
+    thin: "GothamHTF-Thin",
+    ultra: "GothamHTF-Ultra",
   },
   metronicSlab: {
     air: "MetronicSlabProAir",

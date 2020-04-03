@@ -1,14 +1,19 @@
 import React from "react";
 import {InputComponentStyle} from "./styles";
 
-export class CustomInput extends React.Component {
+interface Props {
+  label?: string;
+}
+
+export class CustomInput extends React.Component<Props> {
   render = () => {
-    const {View, Input, LabelError} = InputComponentStyle;
+    const {View, Label, Input} = InputComponentStyle;
+    const {label} = this.props;
 
     return (
       <View>
+        {label !== undefined && <Label>{label}</Label>}
         <Input />
-        <LabelError>TESTE</LabelError>
       </View>
     );
   };

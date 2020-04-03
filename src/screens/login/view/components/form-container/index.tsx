@@ -9,14 +9,20 @@ interface Props extends PropsGlobal {
 
 export class LoginScreenFormContainer extends React.Component<Props> {
   render = () => {
-    const {TitleView, MessageView} = LoginScreenFormContainerStyles;
+    const {
+      ContainerView,
+      TitleView,
+      MessageView,
+    } = LoginScreenFormContainerStyles;
     const {student, studentInstructions} = LoginScreenFormContainerConstants;
+    const {children} = this.props;
 
     return (
-      <>
+      <ContainerView>
         <TitleView>{student}</TitleView>
         <MessageView>{studentInstructions}</MessageView>
-      </>
+        {children}
+      </ContainerView>
     );
   };
 }
