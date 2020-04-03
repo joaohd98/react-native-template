@@ -116,4 +116,8 @@ export class FormInput {
 
     this.changeInput(this);
   }
+
+  isValid() {
+    return this.status === FormInputStatus.valid;
+  }
 }

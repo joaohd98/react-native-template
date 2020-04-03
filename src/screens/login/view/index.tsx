@@ -20,6 +20,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     password: new FormInput({
       changeInput: value => this.setState({password: value}),
       rules: [{type: RulesType.required}],
+      isPassword: true,
     }),
     status: "",
   };
@@ -32,7 +33,10 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
         <LoginScreenFormContainer textVisible={!raCpf.isFocused && !password.isFocused}>
           <LoginScreenInputRaCpf input={raCpf} />
           <LoginScreenInputPassword input={password} />
-          <LoginScreenFormFooter visibleForgotPassword={!raCpf.isFocused && !password.isFocused} />
+          <LoginScreenFormFooter
+            isSubmitEnabled={raCpf.isValid() && password.isValid()}
+            visibleForgotPassword={!raCpf.isFocused && !password.isFocused}
+          />
         </LoginScreenFormContainer>
       </Container>
     );

@@ -12,13 +12,13 @@ export const FooterButtonStyles = {
     padding-vertical: 22px;
     box-shadow: 0 2px 12px ${Colors.shadow};
   `,
-  Text: styled.Text`
+  Text: styled.Text<{isEnabled: boolean}>`
     font-family: ${Fonts.gotham.bold};
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.03px;
     text-transform: uppercase;
-    color: ${Colors.black};
+    color: ${props => (props.isEnabled ? Colors.black : Colors.disabled)};
   `,
 };

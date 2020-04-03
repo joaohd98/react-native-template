@@ -2,6 +2,7 @@ export const Colors = {
   primary: "#29F4D5",
   primaryGradient: "#48FDE1",
   black: "#000",
+  disabled: "#0005",
   white: "#FFF",
   lightGray: "#FAFAFA",
   lightBold: "#91a3ad",
