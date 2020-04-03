@@ -4,8 +4,11 @@ import {Colors} from "../../theme/colors";
 import LinearGradient from "react-native-linear-gradient";
 
 export const FooterButtonStyles = {
+  TouchableOpacity: styled.TouchableOpacity`
+    margin-horizontal: 20%;
+  `,
   LinearGradient: styled(LinearGradient)`
-    width: 100%;
+    border-radius: 100px;
     padding-vertical: 22px;
     box-shadow: 0 2px 12px ${Colors.shadow};
   `,

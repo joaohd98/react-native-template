@@ -1,6 +1,5 @@
 import React from "react";
 import {FooterButtonStyles} from "./styles";
-import {TouchableOpacity} from "react-native";
 import {Colors} from "../../theme/colors";
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
 
 export class FooterButton extends React.Component<Props> {
   render = () => {
-    const {LinearGradient, Text} = FooterButtonStyles;
+    const {TouchableOpacity, LinearGradient, Text} = FooterButtonStyles;
     const {text} = this.props;
 
     return (

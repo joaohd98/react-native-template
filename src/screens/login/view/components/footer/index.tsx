@@ -3,15 +3,20 @@ import {LoginScreenFormFooterStyles} from "./styles";
 import {LoginScreenFormFooterConst} from "./const";
 import {FooterButton} from "../../../../../components/footer-button";
 
-export class LoginScreenFormFooter extends React.PureComponent {
+interface Props {
+  visibleForgotPassword: boolean;
+}
+
+export class LoginScreenFormFooter extends React.Component<Props> {
   render = () => {
     const {ForgotPasswordButton, ForgotPasswordText} = LoginScreenFormFooterStyles;
     const {forgotPassword, footerText} = LoginScreenFormFooterConst;
+    const {visibleForgotPassword} = this.props;
 
     return (
       <>
         <ForgotPasswordButton>
-          <ForgotPasswordText>{forgotPassword}</ForgotPasswordText>
+          {visibleForgotPassword && <ForgotPasswordText>{forgotPassword}</ForgotPasswordText>}
         </ForgotPasswordButton>
         <FooterButton text={footerText} />
       </>

@@ -10,40 +10,19 @@ interface Props extends PropsGlobal {
 interface State {
   screenHeight: number;
   height: number;
-  heightFooter: number;
 }
 
 export class Container extends React.Component<Props, State> {
   state = {
     screenHeight: 0,
     height: Dimensions.get("window").height,
-    heightFooter: 0,
-  };
-
-  onContentSizeChange = (_contentWidth: number, contentHeight: number) => {
-    this.setState({screenHeight: contentHeight});
-  };
-
-  onLayoutFooterView = ({
-    nativeEvent: {
-      layout: {height},
-    },
-  }) => {
-    this.setState({heightFooter: height});
   };
 
   getFooterContent = () => {
     const {FooterView} = ContainerStyle;
     const {footerContent} = this.props;
-    // const {heightFooter} = this.state;
 
-    return (
-      footerContent && (
-        <FooterView onLayout={this.onLayoutFooterView} bottom={0}>
-          {footerContent}
-        </FooterView>
-      )
-    );
+    return footerContent && <FooterView>{footerContent}</FooterView>;
   };
 
   render = () => {
@@ -56,7 +35,7 @@ export class Container extends React.Component<Props, State> {
     return (
       <KeyboardAvoidingView behavior={Platform.select({ios: "padding", android: undefined})}>
         <SafeAreaView>
-          <ScrollView scrollEnabled={scrollEnabled} onContentSizeChange={this.onContentSizeChange}>
+          <ScrollView scrollEnabled={scrollEnabled}>
             <ContentView>{children}</ContentView>
           </ScrollView>
           {this.getFooterContent()}

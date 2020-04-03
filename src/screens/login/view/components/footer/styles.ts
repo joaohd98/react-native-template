@@ -4,7 +4,7 @@ import {Colors} from "../../../../../theme/colors";
 
 export const LoginScreenFormFooterStyles = {
   ForgotPasswordButton: styled.TouchableOpacity`
-    margin-bottom: 30px;
+    margin-vertical: 50px;
   `,
   ForgotPasswordText: styled.Text`
     font-family: ${Fonts.roboto.regular};

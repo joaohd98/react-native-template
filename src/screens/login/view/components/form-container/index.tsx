@@ -4,19 +4,23 @@ import {LoginScreenFormContainerConstants} from "./const";
 import {LoginScreenFormContainerStyles} from "./styles";
 
 interface Props extends PropsGlobal {
-  submitForm?: () => void;
+  textVisible: boolean;
 }
 
 export class LoginScreenFormContainer extends React.Component<Props> {
   render = () => {
     const {ContainerView, TitleView, MessageView} = LoginScreenFormContainerStyles;
     const {student, studentInstructions} = LoginScreenFormContainerConstants;
-    const {children} = this.props;
+    const {children, textVisible} = this.props;
 
     return (
       <ContainerView>
-        <TitleView>{student}</TitleView>
-        <MessageView>{studentInstructions}</MessageView>
+        {textVisible && (
+          <>
+            <TitleView>{student}</TitleView>
+            <MessageView>{studentInstructions}</MessageView>
+          </>
+        )}
         {children}
       </ContainerView>
     );
