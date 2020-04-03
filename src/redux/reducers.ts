@@ -13,10 +13,7 @@ const persistConfig = {
   storage: AsyncStorage,
 };
 
-const loginScreenPersistedReducer = persistReducer(
-  persistConfig,
-  LoginScreenReducer
-);
+const loginScreenPersistedReducer = persistReducer(persistConfig, LoginScreenReducer);
 
 const reducers = combineReducers({
   loginScreenReducer: loginScreenPersistedReducer,

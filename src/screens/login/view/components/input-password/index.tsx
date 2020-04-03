@@ -1,7 +1,7 @@
 import React from "react";
-import {CustomInput} from "../../../../../components/input";
 import {LoginScreenInputPasswordConst} from "./const";
 import {FormInput} from "../../../../../validation/form-input";
+import {LoginScreenInputPasswordStyles} from "./styles";
 
 interface Props {
   input: FormInput;
@@ -9,9 +9,10 @@ interface Props {
 
 export class LoginScreenInputPassword extends React.Component<Props> {
   render = () => {
+    const {Input} = LoginScreenInputPasswordStyles;
     const {label} = LoginScreenInputPasswordConst;
     const {input} = this.props;
 
-    return <CustomInput label={label} input={input} />;
+    return <Input label={label} input={input} />;
   };
 }

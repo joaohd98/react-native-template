@@ -10,10 +10,7 @@ export class StackPureNavigator extends React.Component<Props> {
     const Stack = createStackNavigator();
 
     return (
-      <Stack.Navigator
-        headerMode={"none"}
-        initialRouteName={this.props.initialRouteName}
-      >
+      <Stack.Navigator headerMode={"none"} initialRouteName={this.props.initialRouteName}>
         {this.props.children}
       </Stack.Navigator>
     );

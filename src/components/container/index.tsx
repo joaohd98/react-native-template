@@ -38,10 +38,7 @@ export class Container extends React.Component<Props, State> {
 
     return (
       <SafeAreaView>
-        <ScrollView
-          scrollEnabled={scrollEnabled}
-          onContentSizeChange={this.onContentSizeChange}
-        >
+        <ScrollView scrollEnabled={scrollEnabled} onContentSizeChange={this.onContentSizeChange}>
           <ContentView>{children}</ContentView>
         </ScrollView>
         {this.getFooterContent()}

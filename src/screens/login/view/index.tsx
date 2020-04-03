@@ -10,7 +10,6 @@ import {LoginScreenProps} from "./model/login-screen-props";
 import {LoginScreenState} from "./model/login-screen-state";
 import {FormInput} from "../../../validation/form-input";
 import {RulesType} from "../../../validation/rules-type";
-// import {Text} from "react-native";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -33,8 +32,6 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
         <LoginScreenFormContainer>
           <LoginScreenInputRaCpf input={raCpf} />
           <LoginScreenInputPassword input={password} />
-          {/*<Text style={{color: "white"}}>{raCpf.status}</Text>*/}
-          {/*<Text style={{color: "white"}}>{password.status}</Text>*/}
         </LoginScreenFormContainer>
       </Container>
     );

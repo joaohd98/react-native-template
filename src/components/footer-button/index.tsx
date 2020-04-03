@@ -14,10 +14,7 @@ export class FooterButton extends React.Component<Props> {
 
     return (
       <TouchableOpacity>
-        <LinearGradient
-          colors={[Colors.primary, Colors.primaryGradient]}
-          angle={180}
-        >
+        <LinearGradient colors={[Colors.primary, Colors.primaryGradient]} angle={180}>
           <Text>{text}</Text>
         </LinearGradient>
       </TouchableOpacity>

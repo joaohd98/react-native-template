@@ -1,7 +1,7 @@
 import React from "react";
-import {CustomInput} from "../../../../../components/input";
 import {LoginScreenInputRaCpfConst} from "./const";
 import {FormInput} from "../../../../../validation/form-input";
+import {LoginScreenInputRaCpfStyles} from "./styles";
 
 interface Props {
   input: FormInput;
@@ -9,9 +9,10 @@ interface Props {
 
 export class LoginScreenInputRaCpf extends React.Component<Props> {
   render = () => {
+    const {Input} = LoginScreenInputRaCpfStyles;
     const {label} = LoginScreenInputRaCpfConst;
     const {input} = this.props;
 
-    return <CustomInput label={label} input={input} />;
+    return <Input label={label} input={input} />;
   };
 }
