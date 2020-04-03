@@ -20,8 +20,8 @@ export const ContainerStyle = {
     background-color: ${Colors.black};
   `,
   FooterView: styled.View`
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   `,
 };

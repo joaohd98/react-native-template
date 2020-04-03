@@ -4,7 +4,7 @@ import {ContainerStyle} from "./styles";
 import {PropsGlobal} from "../../helpers/props-global";
 
 interface Props extends PropsGlobal {
-  footerContent?: JSX.Element[];
+  footerContent?: JSX.Element | JSX.Element[];
 }
 
 interface State {
