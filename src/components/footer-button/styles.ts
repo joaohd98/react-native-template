@@ -1,11 +1,11 @@
 import styled from "styled-components/native";
 import {Fonts} from "../../theme/fonts";
 import {Colors} from "../../theme/colors";
+import LinearGradient from "react-native-linear-gradient";
 
 export const FooterButtonStyles = {
-  TouchableOpacity: styled.View`
+  LinearGradient: styled(LinearGradient)`
     width: 100%;
-    background-color: ${Colors.primary};
     padding-vertical: 22px;
     box-shadow: 0 2px 12px ${Colors.shadow};
   `,

@@ -9,14 +9,14 @@ export class LoginScreenFormFooter extends React.PureComponent {
       ForgotPasswordButton,
       ForgotPasswordText,
     } = LoginScreenFormFooterStyles;
-    const {forgotPassword} = LoginScreenFormFooterConst;
+    const {forgotPassword, footerText} = LoginScreenFormFooterConst;
 
     return (
       <>
         <ForgotPasswordButton>
           <ForgotPasswordText>{forgotPassword}</ForgotPasswordText>
         </ForgotPasswordButton>
-        <FooterButton />
+        <FooterButton text={footerText} />
       </>
     );
   };

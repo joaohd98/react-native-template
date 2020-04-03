@@ -1,13 +1,26 @@
 import React from "react";
 import {FooterButtonStyles} from "./styles";
+import {TouchableOpacity} from "react-native";
+import {Colors} from "../../theme/colors";
 
-export class FooterButton extends React.Component {
+interface Props {
+  text: string;
+}
+
+export class FooterButton extends React.Component<Props> {
   render = () => {
-    const {TouchableOpacity, Text} = FooterButtonStyles;
+    const {LinearGradient, Text} = FooterButtonStyles;
+    const {text} = this.props;
 
     return (
       <TouchableOpacity>
-        <Text>FAZER LOGIN</Text>
+        <LinearGradient
+          colors={[Colors.primary, Colors.primaryGradient]}
+          locations={[0, 1.0]}
+          angle={180}
+        >
+          <Text>{text}</Text>
+        </LinearGradient>
       </TouchableOpacity>
     );
   };
