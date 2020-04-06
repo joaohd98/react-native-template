@@ -27,5 +27,3 @@ export class LoginRequestModel {
     this._senha = value;
   }
 }
-
-export class LoginResponseModel {}

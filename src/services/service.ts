@@ -3,17 +3,17 @@ import axios from "axios";
 import {Helpers} from "../helpers/helpers";
 
 export class Service {
-  protected static makeGetRequest = async <Response, Request = null>(
+  protected static makeGetRequest = async <Response>(
     url: string,
-    params: Request,
+    params: {[key: string]: string},
     headers: HeadersInit_ = {}
-  ): Promise<ServiceResponse<Response>> => Service.makeRequest(url, "get", headers, params);
+  ): Promise<ServiceResponse<Response>> => Service.makeRequest<Response>(url, "get", headers, params);
 
-  protected static makePostRequest = async <Response, Request = null>(
+  protected static makePostRequest = async <Response>(
     url: string,
-    params: Request,
+    params: {[key: string]: string},
     headers: HeadersInit_ = {}
-  ): Promise<ServiceResponse<Response>> => Service.makeRequest(url, "post", headers, params);
+  ): Promise<ServiceResponse<Response>> => Service.makeRequest<Response>(url, "post", headers, params);
 
   private static makeRequest = async <Response>(
     url: string,
@@ -29,7 +29,7 @@ export class Service {
         data,
       });
 
-      let res = await response.data;
+      let res = response.data;
 
       if (Array.isArray(res)) {
         res.forEach(element => new Response(element));
