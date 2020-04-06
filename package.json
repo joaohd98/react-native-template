@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios-dev": "ENVFILE=.env react-native run-ios",
+    "ios-store": "ENVFILE=.env.dev react-native run-ios",
+    "android-dev": "ENVFILE=.env react-native run-android",
+    "android-store": "ENVFILE=.env.dev react-native run-android",
     "start": "react-native start",
     "test": "jest --silent --detectOpenHandles",
     "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx"
@@ -17,6 +20,7 @@
     "react": "16.11.0",
     "react-dom": "16.8.0",
     "react-native": "0.62.0",
+    "react-native-config": "1.0.0",
     "react-native-gesture-handler": "1.6.1",
     "react-native-linear-gradient": "2.5.6",
     "react-native-reanimated": "1.7.1",

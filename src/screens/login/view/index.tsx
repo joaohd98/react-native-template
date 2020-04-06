@@ -10,6 +10,8 @@ import {LoginScreenProps} from "./model/login-screen-props";
 import {LoginScreenState} from "./model/login-screen-state";
 import {FormInput} from "../../../validation/form-input";
 import {RulesType} from "../../../validation/rules-type";
+import Config from "react-native-config";
+import {Text} from "react-native";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -39,6 +41,8 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
             visibleForgotPassword={!raCpf.isFocused && !password.isFocused}
           />
         </LoginScreenFormContainer>
+        <Text style={{color: "#FFF"}}>{Config.API_URL}</Text>
+        <Text style={{color: "#FFF"}}>{Config.GOOGLE_MAPS_API_KEY}</Text>
       </Container>
     );
   }

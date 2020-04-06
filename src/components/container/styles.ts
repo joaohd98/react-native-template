@@ -2,9 +2,6 @@ import styled from "styled-components/native";
 import {Colors} from "../../theme/colors";
 
 export const ContainerStyle = {
-  KeyboardAvoidingView: styled.KeyboardAvoidingView`
-    flex: 1;
-  `,
   SafeAreaView: styled.SafeAreaView`
     flex: 1;
     background-color: ${Colors.black};
@@ -22,9 +19,9 @@ export const ContainerStyle = {
     flex-grow: 1;
     background-color: ${Colors.black};
   `,
-  FooterView: styled.View<{bottom?: number}>`
+  FooterView: styled.View`
     position: absolute;
-    bottom: ${props => (props.bottom ? props.bottom : 0)};
+    bottom: 0;
     width: 100%;
   `,
 };

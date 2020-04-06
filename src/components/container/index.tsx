@@ -1,5 +1,5 @@
 import React from "react";
-import {Dimensions, Platform} from "react-native";
+import {Dimensions} from "react-native";
 import {ContainerStyle} from "./styles";
 import {PropsGlobal} from "../../helpers/props-global";
 
@@ -18,6 +18,10 @@ export class Container extends React.Component<Props, State> {
     height: Dimensions.get("window").height,
   };
 
+  onContentSizeChange = (_contentWidth: number, contentHeight: number) => {
+    this.setState({screenHeight: contentHeight});
+  };
+
   getFooterContent = () => {
     const {FooterView} = ContainerStyle;
     const {footerContent} = this.props;
@@ -26,21 +30,19 @@ export class Container extends React.Component<Props, State> {
   };
 
   render = () => {
-    const {KeyboardAvoidingView, SafeAreaView, ScrollView, ContentView} = ContainerStyle;
+    const {SafeAreaView, ScrollView, ContentView} = ContainerStyle;
     const {screenHeight, height} = this.state;
     const {children} = this.props;
 
     const scrollEnabled = screenHeight > height;
 
     return (
-      <KeyboardAvoidingView behavior={Platform.select({ios: "padding", android: undefined})}>
-        <SafeAreaView>
-          <ScrollView scrollEnabled={scrollEnabled}>
-            <ContentView>{children}</ContentView>
-          </ScrollView>
-          {this.getFooterContent()}
-        </SafeAreaView>
-      </KeyboardAvoidingView>
+      <SafeAreaView>
+        <ScrollView scrollEnabled={scrollEnabled} onContentSizeChange={this.onContentSizeChange}>
+          <ContentView>{children}</ContentView>
+        </ScrollView>
+        {this.getFooterContent()}
+      </SafeAreaView>
     );
   };
 }
