@@ -16,6 +16,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     raCpf: new FormInput({
       changeInput: value => this.setState({raCpf: value}),
       rules: [{type: RulesType.required}],
+      keyboardType: "number-pad",
     }),
     password: new FormInput({
       changeInput: value => this.setState({password: value}),
