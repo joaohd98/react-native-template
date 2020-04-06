@@ -11,8 +11,8 @@ import {LoginScreenState} from "./model/login-screen-state";
 import {FormInput} from "../../../validation/form-input";
 import {RulesType} from "../../../validation/rules-type";
 import {ServiceStatus} from "../../../services/model";
-// import {LoginService} from "../../../services/login/service";
-// import {LoginRequestModel} from "../../../services/login/model";
+import {LoginService} from "../../../services/login/service";
+import {LoginRequestModel} from "../../../services/login/model";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -30,19 +30,20 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
   };
 
   loginUser = () => {
-    // const {raCpf, password} = this.state;
-    //   LoginService.loginUser(new LoginRequestModel({usuario: raCpf.value, senha: password.value})).then(
-    //     response => {
-    //       console.log(response);
-    //     },
-    //     e => {
-    //       console.log(e.message);
-    //     }
-    //   );
+    const {raCpf, password} = this.state;
+
+    LoginService.loginUser(new LoginRequestModel({usuario: raCpf.value, senha: password.value})).then(
+      response => {
+        this.setState({status: response.status});
+      },
+      e => {
+        this.setState({status: e.message});
+      }
+    );
   };
 
   render() {
-    const {raCpf, password} = this.state;
+    const {raCpf, password, status} = this.state;
 
     return (
       <Container>
@@ -50,6 +51,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
           <LoginScreenInputRaCpf input={raCpf} />
           <LoginScreenInputPassword input={password} />
           <LoginScreenFormFooter
+            status={status}
             onSubmit={this.loginUser}
             isSubmitEnabled={raCpf.isValid() && password.isValid()}
             visibleForgotPassword={!raCpf.isFocused && !password.isFocused}
