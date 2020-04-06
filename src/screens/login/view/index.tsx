@@ -10,8 +10,9 @@ import {LoginScreenProps} from "./model/login-screen-props";
 import {LoginScreenState} from "./model/login-screen-state";
 import {FormInput} from "../../../validation/form-input";
 import {RulesType} from "../../../validation/rules-type";
-import Config from "react-native-config";
-import {Text} from "react-native";
+import {ServiceStatus} from "../../../services/model";
+// import {LoginService} from "../../../services/login/service";
+// import {LoginRequestModel} from "../../../services/login/model";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -25,7 +26,19 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
       rules: [{type: RulesType.required}],
       isPassword: true,
     }),
-    status: "",
+    status: ServiceStatus.noAction,
+  };
+
+  loginUser = () => {
+    // const {raCpf, password} = this.state;
+    //   LoginService.loginUser(new LoginRequestModel({usuario: raCpf.value, senha: password.value})).then(
+    //     response => {
+    //       console.log(response);
+    //     },
+    //     e => {
+    //       console.log(e.message);
+    //     }
+    //   );
   };
 
   render() {
@@ -37,12 +50,11 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
           <LoginScreenInputRaCpf input={raCpf} />
           <LoginScreenInputPassword input={password} />
           <LoginScreenFormFooter
+            onSubmit={this.loginUser}
             isSubmitEnabled={raCpf.isValid() && password.isValid()}
             visibleForgotPassword={!raCpf.isFocused && !password.isFocused}
           />
         </LoginScreenFormContainer>
-        <Text style={{color: "#FFF"}}>{Config.API_URL}</Text>
-        <Text style={{color: "#FFF"}}>{Config.GOOGLE_MAPS_API_KEY}</Text>
       </Container>
     );
   }

@@ -4,6 +4,7 @@ import {LoginScreenFormFooterConst} from "./const";
 import {FooterButton} from "../../../../../components/footer-button";
 
 interface Props {
+  onSubmit: () => void;
   visibleForgotPassword: boolean;
   isSubmitEnabled: boolean;
 }
@@ -12,14 +13,14 @@ export class LoginScreenFormFooter extends React.Component<Props> {
   render = () => {
     const {ForgotPasswordButton, ForgotPasswordText} = LoginScreenFormFooterStyles;
     const {forgotPassword, footerText} = LoginScreenFormFooterConst;
-    const {visibleForgotPassword, isSubmitEnabled} = this.props;
+    const {visibleForgotPassword, isSubmitEnabled, onSubmit} = this.props;
 
     return (
       <>
         <ForgotPasswordButton>
           {visibleForgotPassword && <ForgotPasswordText>{forgotPassword}</ForgotPasswordText>}
         </ForgotPasswordButton>
-        <FooterButton isEnabled={isSubmitEnabled} text={footerText} />
+        <FooterButton isEnabled={isSubmitEnabled} text={footerText} onPress={() => onSubmit()} />
       </>
     );
   };

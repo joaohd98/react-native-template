@@ -1,5 +1,5 @@
-// import {StatesReducers} from "../redux/reducers";
-// import {bindActionCreators, Dispatch} from "redux";
-// import {connect} from "react-redux";
-//
-export class Helpers {}
+import NetInfo from "@react-native-community/netinfo";
+
+export class Helpers {
+  static hasConnection = async (): Promise<boolean> => (await NetInfo.fetch()).isConnected;
+}

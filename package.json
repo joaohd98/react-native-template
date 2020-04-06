@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios-dev": "ENVFILE=.env react-native run-ios",
-    "ios-store": "ENVFILE=.env.dev react-native run-ios",
-    "android-dev": "ENVFILE=.env react-native run-android",
-    "android-store": "ENVFILE=.env.dev react-native run-android",
+    "ios-dev": "ENVFILE=.env.dev react-native run-ios",
+    "ios-store": "ENVFILE=.env react-native run-ios",
+    "android-dev": "ENVFILE=.env.dev react-native run-android",
+    "android-store": "ENVFILE=.env react-native run-android",
     "start": "react-native start",
     "test": "jest --silent --detectOpenHandles",
     "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx"
@@ -15,8 +15,10 @@
   "dependencies": {
     "@react-native-community/async-storage": "1.8.1",
     "@react-native-community/masked-view": "0.1.7",
+    "@react-native-community/netinfo": "5.7.0",
     "@react-navigation/native": "5.1.4",
     "@react-navigation/stack": "5.2.9",
+    "axios": "0.19.2",
     "react": "16.11.0",
     "react-dom": "16.8.0",
     "react-native": "0.62.0",
