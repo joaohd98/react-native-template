@@ -17,11 +17,13 @@ import {LoginRequestModel} from "../../../services/login/request";
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
     raCpf: new FormInput({
+      value: "13202",
       changeInput: value => this.setState({raCpf: value}),
       rules: [{type: RulesType.required}],
       keyboardType: "number-pad",
     }),
     password: new FormInput({
+      value: "020310",
       changeInput: value => this.setState({password: value}),
       rules: [{type: RulesType.required}],
       isPassword: true,
@@ -36,9 +38,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
       response => {
         this.setState({status: response.status});
       },
-      e => {
-        this.setState({status: e.message});
-      }
+      e => this.setState({status: e.message})
     );
   };
 

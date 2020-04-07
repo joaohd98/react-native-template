@@ -11,6 +11,7 @@ export interface StatesReducers {
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
+  blacklist: ["functions"],
 };
 
 const loginScreenPersistedReducer = persistReducer(persistConfig, LoginScreenReducer);

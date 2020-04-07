@@ -6,11 +6,6 @@ export class LoginRequestModel {
     Object.assign(this, init);
   }
 
-  getRequest = () => ({
-    Usuario: this.usuario,
-    Senha: this.senha,
-  });
-
   get usuario(): string {
     return this._usuario;
   }
@@ -26,4 +21,9 @@ export class LoginRequestModel {
   set senha(value: string) {
     this._senha = value;
   }
+
+  getRequest = () => ({
+    Usuario: this.usuario,
+    Senha: this.senha,
+  });
 }

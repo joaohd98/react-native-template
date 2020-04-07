@@ -3,24 +3,24 @@ import axios from "axios";
 import {Helpers} from "../helpers/helpers";
 
 export class Service {
-  protected static makeGetRequest = async <Response>(
+  protected static makeGetRequest = async <ResponseType>(
     url: string,
     params: {[key: string]: string},
     headers: HeadersInit_ = {}
-  ): Promise<ServiceResponse<Response>> => Service.makeRequest<Response>(url, "get", headers, params);
+  ): Promise<ServiceResponse<ResponseType>> => Service.makeRequest<ResponseType>(url, "get", headers, params);
 
-  protected static makePostRequest = async <Response>(
+  protected static makePostRequest = async <ResponseType>(
     url: string,
     params: {[key: string]: string},
     headers: HeadersInit_ = {}
-  ): Promise<ServiceResponse<Response>> => Service.makeRequest<Response>(url, "post", headers, params);
+  ): Promise<ServiceResponse<ResponseType>> => Service.makeRequest<ResponseType>(url, "post", headers, params);
 
-  private static makeRequest = async <Response>(
+  private static makeRequest = async <ResponseType>(
     url: string,
     method: "post" | "get",
     headers: HeadersInit_,
     data: {}
-  ): Promise<ServiceResponse<Response>> => {
+  ): Promise<ServiceResponse<ResponseType>> => {
     try {
       const response = await axios({
         method,
@@ -29,17 +29,9 @@ export class Service {
         data,
       });
 
-      let res = response.data;
-
-      if (Array.isArray(res)) {
-        res.forEach(element => new Response(element));
-      } else {
-        res = new Response(res);
-      }
-
       return {
         status: ServiceStatus.success,
-        response: res,
+        data: response.data,
       };
     } catch {
       throw new ServiceStatusException(

@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios-dev": "ENVFILE=.env.dev react-native run-ios",
-    "ios-store": "ENVFILE=.env react-native run-ios",
-    "android-dev": "ENVFILE=.env.dev react-native run-android",
-    "android-store": "ENVFILE=.env react-native run-android",
+    "set-env-prod": "ENVFILE=.env",
+    "set-env-dev": "ENVFILE=.env.dev",
+    "ios-dev": "npm run set-env-dev react-native run-ios",
+    "ios-store": "npm run set-env-prod react-native run-ios",
+    "android-dev": "npm run set-env-dev react-native run-android",
+    "android-store": "npm run set-env-prod react-native run-android",
     "start": "react-native start",
     "test": "jest --silent --detectOpenHandles",
     "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx"
