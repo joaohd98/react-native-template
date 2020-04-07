@@ -63,7 +63,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
   }
 }
 
-const mapStateToProps = (state: StatesReducers) => ({
+const mapStateToProps = (state: StatesReducers): LoginScreenProps => ({
   ...state.loginScreenReducer,
 });
 

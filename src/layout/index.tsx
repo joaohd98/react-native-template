@@ -18,7 +18,7 @@ export const Layout = () => (
     <StatusBar barStyle="dark-content" />
     <PersistGate loading={null} persistor={persistor}>
       <NavigationContainer>
-        <StackPureNavigator initialRouteName={RoutesName.guestRoutes}>
+        <StackPureNavigator>
           <Stack.Screen name={guestRoutes} component={GuestRoutes} />
           <Stack.Screen name={loggedRoutes} component={LoggedRoutes} />
         </StackPureNavigator>

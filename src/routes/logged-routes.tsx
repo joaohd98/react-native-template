@@ -1,11 +1,12 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import {LoginScreen} from "../screens/login/view";
+import {HomeScreen} from "../screens/home/view";
+import {RoutesName} from "./routes-name";
 
 const Stack = createStackNavigator();
 
 export const LoggedRoutes = () => (
   <Stack.Navigator>
-    <Stack.Screen name={"test"} component={LoginScreen} />
+    <Stack.Screen name={RoutesName.homeScreen} component={HomeScreen} />
   </Stack.Navigator>
 );

@@ -10,6 +10,7 @@ export const GuestRoutes = () => (
   <Stack.Navigator
     screenOptions={{
       headerTitle: "",
+      headerTransparent: true,
       headerStyle: {
         backgroundColor: Colors.black,
         borderBottomWidth: 0,
