@@ -13,6 +13,8 @@ import {RulesType} from "../../../validation/rules-type";
 import {ServiceStatus} from "../../../services/model";
 import {LoginService} from "../../../services/login/service";
 import {LoginRequestModel} from "../../../services/login/request";
+import {bindActionCreators, Dispatch} from "redux";
+import {LoginInitialState} from "./redux/login-screen-reducer";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -33,12 +35,11 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
 
   loginUser = () => {
     const {raCpf, password} = this.state;
+    const {loginUser} = this.props.functions!;
 
     LoginService.loginUser(new LoginRequestModel({usuario: raCpf.value, senha: password.value})).then(
-      response => {
-        this.setState({status: response.status});
-      },
-      e => this.setState({status: e.message})
+      response => loginUser(response.data!, raCpf.value, "aluno"),
+      ({message}) => this.setState({status: message})
     );
   };
 
@@ -66,12 +67,8 @@ const mapStateToProps = (state: StatesReducers) => ({
   ...state.loginScreenReducer,
 });
 
-// const mapDispatchToProps = (dispatch: Dispatch) => ({
-//   functions: bindActionCreators(LoginInitialState.functions!, dispatch),
-// });
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  functions: bindActionCreators(LoginInitialState.functions!, dispatch),
+});
 
-export const LoginConnectedScreen = connect(
-  mapStateToProps,
-  //mapDispatchToProps
-  null
-)(LoginScreen);
+export const LoginConnectedScreen = connect(mapStateToProps, mapDispatchToProps)(LoginScreen);
