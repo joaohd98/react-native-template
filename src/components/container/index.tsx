@@ -1,9 +1,9 @@
 import React from "react";
 import {Dimensions} from "react-native";
 import {ContainerStyle} from "./styles";
-import {PropsGlobal} from "../../helpers/props-global";
 
-interface Props extends PropsGlobal {
+interface Props {
+  children?: JSX.Element[] | JSX.Element;
   footerContent?: JSX.Element | JSX.Element[];
 }
 

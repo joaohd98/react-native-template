@@ -33,6 +33,7 @@ module.exports = {
       "args": "after-used",
       "caughtErrors": "all"
     }],
+    "react/display-name": false,
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-empty-function": "off",

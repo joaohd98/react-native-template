@@ -1,12 +1,12 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {RoutesName} from "../../routes/routes-name";
-import {PropsGlobal} from "../../helpers/props-global";
 import {StatesReducers} from "../../redux/reducers";
 import {connect} from "react-redux";
 
-interface Props extends PropsGlobal {
+interface Props {
   raCpf?: string;
+  children?: JSX.Element[] | JSX.Element;
 }
 
 const Stack = createStackNavigator();
@@ -18,7 +18,7 @@ class StackPureNavigatorComponentPure extends React.Component<Props> {
     return (
       <Stack.Navigator
         headerMode={"none"}
-        initialRouteName={raCpf !== undefined ? RoutesName.loggedRoutes : RoutesName.guestRoutes}
+        initialRouteName={raCpf !== undefined ? RoutesName.LoggedRoutes : RoutesName.GuestRoutes}
       >
         {children}
       </Stack.Navigator>

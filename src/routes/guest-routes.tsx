@@ -19,6 +19,6 @@ export const GuestRoutes = () => (
       },
     }}
   >
-    <Stack.Screen name={RoutesName.loginScreen} component={LoginConnectedScreen} />
+    <Stack.Screen name={RoutesName.LoginScreen} component={LoginConnectedScreen} />
   </Stack.Navigator>
 );

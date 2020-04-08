@@ -1,9 +1,17 @@
-import LoginScreen from "../screens/login/view";
-import {HomeScreen} from "../screens/home/view";
+import {HomeScreenNavigationParams} from "../screens/home/view/model/home-screen-navigation-params";
+
+export type RoutesTypes = "GuestRoutes" | "LoggedRoutes" | "LoginScreen" | "HomeScreen";
 
 export const RoutesName = {
-  guestRoutes: "GuestRoutes",
-  loggedRoutes: "LoggedRoutes",
-  loginScreen: LoginScreen.name,
-  homeScreen: HomeScreen.name,
+  GuestRoutes: "GuestRoutes",
+  LoggedRoutes: "LoggedRoutes",
+  LoginScreen: "LoginScreen",
+  HomeScreen: "HomeScreen",
+};
+
+export type RouteStackParamList = {
+  GuestRoutes: undefined;
+  LoggedRoutes: undefined;
+  LoginScreen: undefined;
+  HomeScreen: HomeScreenNavigationParams;
 };
