@@ -5,7 +5,6 @@ import {HomeScreenSubjectsList} from "./components/subjects-list";
 import {HomeScreenHeader} from "./components/header";
 import {HomeScreenProps} from "./model/home-screen-props";
 import {HomeScreenState} from "./model/home-screen-state";
-import {Text} from "react-native";
 
 export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState> {
   componentDidMount() {
@@ -14,7 +13,6 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 
   render = () => (
     <Container>
-      <Text style={{color: "#FFF", fontSize: 20}}>AAA</Text>
       <HomeScreenHelloText />
       <HomeScreenSubjectsList />
     </Container>
