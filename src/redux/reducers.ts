@@ -3,9 +3,12 @@ import {LoginScreenReducer} from "../screens/login/view/redux/login-screen-reduc
 import {LoginScreenProps} from "../screens/login/view/model/login-screen-props";
 import AsyncStorage from "@react-native-community/async-storage";
 import {persistReducer} from "redux-persist";
+import {HomeScreenProps} from "../screens/home/view/model/home-screen-props";
+import {HomeScreenReducer} from "../screens/home/view/redux/home-screen-reducer";
 
 export interface StatesReducers {
   loginScreenReducer: LoginScreenProps;
+  homeScreenReducer: HomeScreenProps;
 }
 
 const persistConfig = {
@@ -18,6 +21,7 @@ const loginScreenPersistedReducer = persistReducer(persistConfig, LoginScreenRed
 
 const reducers = combineReducers({
   loginScreenReducer: loginScreenPersistedReducer,
+  homeScreenReducer: HomeScreenReducer,
 });
 
 export {reducers};

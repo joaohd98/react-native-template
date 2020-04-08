@@ -1,3 +1,1 @@
-export const HomeScreenSubjectsListConst = {
-
-}
+export const HomeScreenSubjectsListConst = {};

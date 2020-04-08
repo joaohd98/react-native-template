@@ -1,7 +1,7 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {RoutesName} from "./routes-name";
-import {HomeScreen} from "../screens/home/view";
+import {HomeConnectedScreen} from "../screens/home/view";
 import {Colors} from "../theme/colors";
 
 const Stack = createStackNavigator();
@@ -24,6 +24,6 @@ export const LoggedRoutes = () => (
       },
     }}
   >
-    <Stack.Screen name={typeof RoutesName.HomeScreen} component={HomeScreen} />
+    <Stack.Screen name={typeof RoutesName.HomeScreen} component={HomeConnectedScreen} />
   </Stack.Navigator>
 );
