@@ -5,7 +5,8 @@ export const Colors = {
   disabled: "#0005",
   white: "#FFF",
   lightGray: "#FAFAFA",
-  lightBold: "#91a3ad",
-  lightMedium: "#f2f2f2",
+  lightBold: "#91A3AD",
+  lightMedium: "#F2F2F2",
+  lightRegular: "#E0E0E0",
   shadow: "rgba(0, 0, 0, 0.1)",
 };
