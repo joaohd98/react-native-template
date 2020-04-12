@@ -18,7 +18,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 
     return (
       <Container>
-        <HomeScreenHelloText name={name} />
+        <HomeScreenHelloText name={name!} />
         <HomeScreenSubjectsList />
       </Container>
     );
@@ -26,8 +26,8 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 }
 
 const mapStateToProps = (state: StatesReducers): HomeScreenProps => ({
-  name: state.loginScreenReducer.name,
   ...state.homeScreenReducer,
+  name: state.loginScreenReducer.name,
 });
 
 // const mapDispatchToProps = (dispatch: Dispatch) => ({
