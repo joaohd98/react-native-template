@@ -15,6 +15,6 @@ export const HomeScreenHeader = (navigation: StackNavigationProp<RouteStackParam
         <LogoutText>{logoutText}</LogoutText>
       </LogoutButton>
     ),
-    headerRight: () => <CustomImg.Logo />,
+    headerRight: () => <CustomImg.Logo height={100} width={100} />,
   });
 };
