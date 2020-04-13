@@ -2,7 +2,7 @@ import {HomeScreenNavigationParams} from "../screens/home/view/model/home-screen
 
 export type RoutesTypes = "GuestRoutes" | "LoggedRoutes" | "LoginScreen" | "HomeScreen";
 
-export const RoutesName = {
+export const RoutesName: {[key in RoutesTypes]: RoutesTypes} = {
   GuestRoutes: "GuestRoutes",
   LoggedRoutes: "LoggedRoutes",
   LoginScreen: "LoginScreen",

@@ -15,6 +15,7 @@ import {LoginService} from "../../../services/login/service";
 import {LoginRequestModel} from "../../../services/login/request";
 import {bindActionCreators, Dispatch} from "redux";
 import {LoginInitialState} from "./redux/login-screen-reducer";
+import {RoutesName} from "../../../routes/routes-name";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -34,11 +35,15 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
   };
 
   loginUser = () => {
+    const {navigation} = this.props;
     const {raCpf, password} = this.state;
     const {loginUser} = this.props.functions!;
 
     LoginService.loginUser(new LoginRequestModel({usuario: raCpf.value, senha: password.value})).then(
-      response => loginUser(response.data!, raCpf.value, "aluno"),
+      response => {
+        loginUser(response.data!, raCpf.value, "aluno");
+        navigation?.push(RoutesName.LoginScreen);
+      },
       ({message}) => this.setState({status: message})
     );
   };

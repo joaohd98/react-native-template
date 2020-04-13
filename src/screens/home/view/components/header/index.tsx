@@ -1,10 +1,9 @@
 import React from "react";
 import {StackNavigationProp} from "@react-navigation/stack";
 import {RouteStackParamList} from "../../../../../routes/routes-name";
-import {images} from "../../../../../assets";
-import {Image} from "react-native";
 import {HomeScreenHeaderStyles} from "./styles";
 import {HomeScreenHeaderConst} from "./const";
+import {CustomImg} from "../../../../../assets/images";
 
 export const HomeScreenHeader = (navigation: StackNavigationProp<RouteStackParamList, "HomeScreen">) => {
   const {logoutText} = HomeScreenHeaderConst;
@@ -16,6 +15,6 @@ export const HomeScreenHeader = (navigation: StackNavigationProp<RouteStackParam
         <LogoutText>{logoutText}</LogoutText>
       </LogoutButton>
     ),
-    headerRight: () => <Image resizeMode={"stretch"} source={images.logo} width={100} height={100} />,
+    headerRight: () => <CustomImg.Logo width={100} height={100} />,
   });
 };
