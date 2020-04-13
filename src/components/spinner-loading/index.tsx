@@ -43,7 +43,7 @@ export class SpinnerLoading extends React.Component<Props, State> {
     });
 
     return (
-      <Animated.View style={{width: 100, height: 100, transform: [{rotate: spin}]}}>
+      <Animated.View style={{width, height, transform: [{rotate: spin}]}}>
         <CustomImg.Loading height={height} width={width} stroke={color} />
       </Animated.View>
     );
