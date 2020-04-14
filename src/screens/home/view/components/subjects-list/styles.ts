@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import {Fonts} from "../../../../../theme/fonts";
 import {Colors} from "../../../../../theme/colors";
+import {TryAgain} from "../../../../../components/try-again";
 
 export const HomeScreenSubjectsListStyles = {
   List: styled.View`
@@ -69,5 +70,12 @@ export const HomeScreenSubjectsListStyles = {
     font-size: 22px;
     line-height: 26px;
     color: ${Colors.lightRegular};
+  `,
+  LoadingContainer: styled.View`
+    margin: 20px auto;
+  `,
+  TryAgainView: styled(TryAgain)`
+    margin-top: 20px;
+    margin-bottom: 50px;
   `,
 };

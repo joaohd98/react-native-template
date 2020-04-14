@@ -19,12 +19,12 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
   }
 
   render = () => {
-    const {name} = this.props;
+    const {name, status} = this.props;
 
     return (
       <Container>
         <HomeScreenHelloText name={name!} />
-        <HomeScreenSubjectsList />
+        <HomeScreenSubjectsList status={status} />
       </Container>
     );
   };
