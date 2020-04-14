@@ -2,6 +2,7 @@ import {HomeScreenProps} from "../model/home-screen-props";
 import {HomeScreenAction, HomeScreenActionConst, HomeScreenActionType} from "./home-screen-action";
 import {MomentController} from "../../../../helpers/moment-controller";
 import {ServiceStatus} from "../../../../services/model";
+import {LoginScreenAction} from "../../../login/view/redux/login-screen-action";
 
 export const HomeScreenInitialState: HomeScreenProps = {
   name: "",
@@ -9,6 +10,7 @@ export const HomeScreenInitialState: HomeScreenProps = {
   status: ServiceStatus.loading,
   functions: {
     getSubjects: (rmCpf, date) => HomeScreenAction.getSubjects(rmCpf, date),
+    logoutUser: () => LoginScreenAction.logoutUser(),
   },
 };
 

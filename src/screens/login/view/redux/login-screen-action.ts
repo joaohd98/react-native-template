@@ -3,6 +3,7 @@ import {LoginResponseModel} from "../../../../services/login/response";
 
 export enum LoginScreenActionConst {
   SAVE_USER = "LoginScreenActionConst@SAVE_USER",
+  LOGOUT_USER = "LoginScreenActionConst@LOGOUT_USER",
 }
 
 export interface LoginScreenActionType {
@@ -21,5 +22,9 @@ export class LoginScreenAction {
       token: data.token,
       type,
     },
+  });
+
+  static logoutUser = () => ({
+    type: LoginScreenActionConst.LOGOUT_USER,
   });
 }

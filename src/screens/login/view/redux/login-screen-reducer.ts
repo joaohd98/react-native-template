@@ -18,6 +18,11 @@ export const LoginScreenReducer = (state = LoginInitialState, action: LoginScree
         token: action.payload?.token,
       };
     }
+
+    case LoginScreenActionConst.LOGOUT_USER: {
+      return LoginInitialState;
+    }
+
     default:
       return state;
   }

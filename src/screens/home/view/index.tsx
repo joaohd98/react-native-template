@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Container} from "../../../components/container";
 import {HomeScreenHelloText} from "./components/hello-text";
 import {HomeScreenSubjectsList} from "./components/subjects-list";
-import {HomeScreenHeader} from "./components/header";
+import {setHomeScreenHeader} from "./components/header";
 import {HomeScreenProps} from "./model/home-screen-props";
 import {HomeScreenState} from "./model/home-screen-state";
 import {StatesReducers} from "../../../redux/reducers";
@@ -12,8 +12,7 @@ import {HomeScreenInitialState} from "./redux/home-screen-reducer";
 
 export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState> {
   componentDidMount() {
-    HomeScreenHeader(this.props.navigation!);
-
+    setHomeScreenHeader(this.props);
     this.getSubjectDay();
   }
 
