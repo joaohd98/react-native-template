@@ -24,7 +24,7 @@ export class SpinnerLoading extends React.Component<Props, State> {
   startRotateAnimation() {
     Animated.timing(this.state.rotateValue, {
       toValue: 1,
-      duration: 1000,
+      duration: 750,
       easing: Easing.linear,
       useNativeDriver: true,
     }).start(() => {
