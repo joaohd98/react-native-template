@@ -1,9 +1,11 @@
+import {MomentController} from "../../helpers/moment-controller";
+
 export class SubjectDay {
   private _codigoRelacao: number;
   private _conteudo: object[];
   private _disciplina: string;
-  private _horaInicio: string;
-  private _horaTermino: string;
+  private _horaInicio: MomentController;
+  private _horaTermino: MomentController;
   private _horario: string;
   private _turma: string;
 
@@ -35,20 +37,20 @@ export class SubjectDay {
     this._disciplina = value;
   }
 
-  get horaInicio(): string {
-    return this._horaInicio.split(".")[0];
+  get horaInicio(): MomentController {
+    return this._horaInicio;
   }
 
-  set horaInicio(value: string) {
-    this._horaInicio = value;
+  set horaInicio(value: MomentController) {
+    this._horaInicio = new MomentController(value, "HH:mm:sss");
   }
 
-  get horaTermino(): string {
-    return this._horaTermino.split(".")[0];
+  get horaTermino(): MomentController {
+    return this._horaTermino;
   }
 
-  set horaTermino(value: string) {
-    this._horaTermino = value;
+  set horaTermino(value: MomentController) {
+    this._horaTermino = new MomentController(value, "HH:mm:sss");
   }
 
   get horario(): string {

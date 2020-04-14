@@ -44,7 +44,6 @@ export const HomeScreenSubjectsListStyles = {
   SubjectHeaderView: styled.View`
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
   `,
   SubjectHoursText: styled.Text`
     font-family: ${Fonts.metronicSlab.regular};
@@ -55,16 +54,6 @@ export const HomeScreenSubjectsListStyles = {
     text-transform: uppercase;
     color: ${Colors.lightBold};
     margin-right: 10px;
-  `,
-  SubjectRoomText: styled.Text`
-    font-family: ${Fonts.metronicSlab.regular};
-    font-size: 14px;
-    line-height: 16px;
-    text-align: right;
-    letter-spacing: 0.05px;
-    text-transform: uppercase;
-    color: ${Colors.lightBold};
-    margin-left: 10px;
   `,
   SubjectNameText: styled.Text`
     font-family: ${Fonts.roboto.regular};

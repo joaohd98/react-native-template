@@ -34,23 +34,27 @@ export class HomeScreenSubjectsList extends React.Component<Props> {
   };
 
   getListComponent = () => {
-    const {
-      SubjectView,
-      SubjectHeaderView,
-      SubjectHoursText,
-      SubjectRoomText,
-      SubjectNameText,
-    } = HomeScreenSubjectsListStyles;
+    const {subjectDay} = this.props;
+    const {SubjectView, SubjectHeaderView, SubjectHoursText, SubjectNameText} = HomeScreenSubjectsListStyles;
 
-    return (
-      <SubjectView>
-        <SubjectHeaderView>
-          <SubjectHoursText>16:45 - 17:30</SubjectHoursText>
-          <SubjectRoomText>SALA 505</SubjectRoomText>
-        </SubjectHeaderView>
-        <SubjectNameText>Produção e Interpretação de Texto</SubjectNameText>
-      </SubjectView>
-    );
+    const elements: Element[] = [];
+
+    if (subjectDay) {
+      subjectDay.listaMateriasDia.forEach((subject, index) => {
+        elements.push(
+          <SubjectView key={index.toString()}>
+            <SubjectHeaderView>
+              <SubjectHoursText>
+                {subject.horaInicio.getFormattedValue("HH:mm")} - {subject.horaTermino.getFormattedValue("HH:mm")}
+              </SubjectHoursText>
+            </SubjectHeaderView>
+            <SubjectNameText>{subject.disciplina}</SubjectNameText>
+          </SubjectView>
+        );
+      });
+    }
+
+    return elements;
   };
 
   render = () => {
