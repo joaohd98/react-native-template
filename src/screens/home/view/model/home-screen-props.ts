@@ -1,11 +1,12 @@
 import {PropsGlobal} from "../../../../helpers/props-global";
 import {MomentController} from "../../../../helpers/moment-controller";
 import {ServiceStatus} from "../../../../services/model";
+import {SubjectsDayResponseModel} from "../../../../services/subjects-day/response";
 
 export interface HomeScreenProps extends PropsGlobal<"HomeScreen"> {
   name?: string;
   rmCpf?: string;
-  subjects?: any;
+  subjectDay?: SubjectsDayResponseModel;
   selectedDate?: MomentController;
   status: ServiceStatus;
   functions: {

@@ -5,7 +5,6 @@ import {ServiceStatus} from "../../../../services/model";
 
 export const HomeScreenInitialState: HomeScreenProps = {
   name: "",
-  subjects: [],
   selectedDate: new MomentController(),
   status: ServiceStatus.loading,
   functions: {
@@ -15,7 +14,7 @@ export const HomeScreenInitialState: HomeScreenProps = {
 
 export const HomeScreenReducer = (state = HomeScreenInitialState, action: HomeScreenActionType): HomeScreenProps => {
   switch (action.type) {
-    case HomeScreenActionConst.LOADING_SUBJECT: {
+    case HomeScreenActionConst.FETCH_SUBJECT: {
       return {
         ...state,
         status: ServiceStatus.loading,
@@ -23,7 +22,11 @@ export const HomeScreenReducer = (state = HomeScreenInitialState, action: HomeSc
     }
 
     case HomeScreenActionConst.RECEIVE_SUBJECT: {
-      return state;
+      return {
+        ...state,
+        status: action.payload?.status!,
+        subjectDay: action.payload?.subjectDay!,
+      };
     }
 
     default:

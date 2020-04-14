@@ -35,6 +35,7 @@ export const HomeScreenSubjectsListStyles = {
     line-height: 20px;
     align-items: center;
     letter-spacing: 0.01px;
+    text-transform: lowercase;
     color: ${Colors.lightMedium};
   `,
   SubjectView: styled.View`

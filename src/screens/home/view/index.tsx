@@ -12,19 +12,28 @@ import {HomeScreenInitialState} from "./redux/home-screen-reducer";
 
 export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState> {
   componentDidMount() {
-    const {navigation, functions, rmCpf, selectedDate} = this.props;
+    HomeScreenHeader(this.props.navigation!);
 
-    HomeScreenHeader(navigation!);
-    functions.getSubjects(rmCpf!, selectedDate!);
+    this.getSubjectDay();
   }
 
+  getSubjectDay = () => {
+    const {functions, rmCpf, selectedDate} = this.props;
+    functions.getSubjects(rmCpf!, selectedDate!);
+  };
+
   render = () => {
-    const {name, status} = this.props;
+    const {name, status, subjectDay, selectedDate} = this.props;
 
     return (
       <Container>
         <HomeScreenHelloText name={name!} />
-        <HomeScreenSubjectsList status={status} />
+        <HomeScreenSubjectsList
+          status={status}
+          onTryAgain={this.getSubjectDay}
+          subjectDay={subjectDay!}
+          selectedDate={selectedDate!}
+        />
       </Container>
     );
   };
