@@ -4,4 +4,5 @@ const getUrl = (path: string) => Config.API_URL + path;
 
 export const URL = {
   login: getUrl("Logon/Logar"),
+  subjectsDay: getUrl("Calendario/ListarMateriasDia"),
 };

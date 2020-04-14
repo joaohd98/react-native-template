@@ -4,10 +4,10 @@ import {PropsGlobal} from "../../../../helpers/props-global";
 
 export interface LoginScreenProps extends PropsGlobal<"LoginScreen"> {
   name?: string;
-  raCpf?: string;
+  rmCpf?: string;
   type?: string;
   token?: string;
   functions?: {
-    loginUser: (data: LoginResponseModel, raCpf: string, type: "aluno" | "responsavel") => LoginScreenActionType;
+    loginUser: (data: LoginResponseModel, rmCpf: string, type: "aluno" | "responsavel") => LoginScreenActionType;
   };
 }

@@ -19,9 +19,9 @@ import {RoutesName} from "../../../routes/routes-name";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
-    raCpf: new FormInput({
+    rmCpf: new FormInput({
       value: "13202",
-      changeInput: value => this.setState({raCpf: value}),
+      changeInput: value => this.setState({rmCpf: value}),
       rules: [{type: RulesType.required}],
       keyboardType: "number-pad",
     }),
@@ -36,31 +36,31 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
 
   loginUser = () => {
     const {navigation} = this.props;
-    const {raCpf, password} = this.state;
+    const {rmCpf, password} = this.state;
     const {loginUser} = this.props.functions!;
 
-    LoginService.loginUser(new LoginRequestModel({usuario: raCpf.value, senha: password.value})).then(
+    LoginService.loginUser(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(
       response => {
-        loginUser(response.data!, raCpf.value, "aluno");
-        navigation?.push(RoutesName.LoginScreen);
+        loginUser(response.data!, rmCpf.value, "aluno");
+        navigation?.push(RoutesName.HomeScreen);
       },
       ({message}) => this.setState({status: message})
     );
   };
 
   render() {
-    const {raCpf, password, status} = this.state;
+    const {rmCpf, password, status} = this.state;
 
     return (
       <Container>
-        <LoginScreenFormContainer textVisible={!raCpf.isFocused && !password.isFocused}>
-          <LoginScreenInputRaCpf input={raCpf} />
+        <LoginScreenFormContainer textVisible={!rmCpf.isFocused && !password.isFocused}>
+          <LoginScreenInputRaCpf input={rmCpf} />
           <LoginScreenInputPassword input={password} />
           <LoginScreenFormFooter
             status={status}
             onSubmit={this.loginUser}
-            isSubmitEnabled={raCpf.isValid() && password.isValid()}
-            visibleForgotPassword={!raCpf.isFocused && !password.isFocused}
+            isSubmitEnabled={rmCpf.isValid() && password.isValid()}
+            visibleForgotPassword={!rmCpf.isFocused && !password.isFocused}
           />
         </LoginScreenFormContainer>
       </Container>

@@ -19,14 +19,15 @@ export class Service {
     url: string,
     method: "post" | "get",
     headers: HeadersInit_,
-    data: {}
+    value: {}
   ): Promise<ServiceResponse<ResponseType>> => {
     try {
       const response = await axios({
         method,
         url,
         headers,
-        data,
+        data: method === "post" ? value : {},
+        params: method === "get" ? value : {},
       });
 
       return {

@@ -3,7 +3,7 @@ import {LoginScreenAction, LoginScreenActionConst, LoginScreenActionType} from "
 
 export const LoginInitialState: LoginScreenProps = {
   functions: {
-    loginUser: (data, raCpf, type) => LoginScreenAction.saveUser(data, raCpf, type),
+    loginUser: (data, rmCpf, type) => LoginScreenAction.saveUser(data, rmCpf, type),
   },
 };
 
@@ -12,7 +12,7 @@ export const LoginScreenReducer = (state = LoginInitialState, action: LoginScree
     case LoginScreenActionConst.SAVE_USER: {
       return {
         ...state,
-        raCpf: action.payload?.raCpf,
+        rmCpf: action.payload?.rmCpf,
         type: action.payload?.type,
         name: action.payload?.name,
         token: action.payload?.token,

@@ -5,7 +5,7 @@ import {StatesReducers} from "../../redux/reducers";
 import {connect} from "react-redux";
 
 interface Props {
-  raCpf?: string;
+  rmCpf?: string;
   children?: JSX.Element[] | JSX.Element;
 }
 
@@ -13,12 +13,12 @@ const Stack = createStackNavigator();
 
 class StackPureNavigatorComponentPure extends React.Component<Props> {
   render = () => {
-    const {raCpf, children} = this.props;
+    const {rmCpf, children} = this.props;
 
     return (
       <Stack.Navigator
         headerMode={"none"}
-        initialRouteName={raCpf !== undefined ? RoutesName.LoggedRoutes : RoutesName.GuestRoutes}
+        initialRouteName={rmCpf !== undefined ? RoutesName.LoggedRoutes : RoutesName.GuestRoutes}
       >
         {children}
       </Stack.Navigator>
@@ -27,7 +27,7 @@ class StackPureNavigatorComponentPure extends React.Component<Props> {
 }
 
 const mapStateToProps = (state: StatesReducers): Props => ({
-  raCpf: state.loginScreenReducer.raCpf,
+  rmCpf: state.loginScreenReducer.rmCpf,
 });
 
 export const StackPureNavigator = connect(mapStateToProps, null)(StackPureNavigatorComponentPure);

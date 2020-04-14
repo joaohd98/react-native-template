@@ -7,10 +7,15 @@ import {HomeScreenHeader} from "./components/header";
 import {HomeScreenProps} from "./model/home-screen-props";
 import {HomeScreenState} from "./model/home-screen-state";
 import {StatesReducers} from "../../../redux/reducers";
+import {bindActionCreators, Dispatch} from "redux";
+import {HomeScreenInitialState} from "./redux/home-screen-reducer";
 
 export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState> {
   componentDidMount() {
-    HomeScreenHeader(this.props.navigation!);
+    const {navigation, functions, rmCpf, selectedDate} = this.props;
+
+    HomeScreenHeader(navigation!);
+    functions.getSubjects(rmCpf!, selectedDate!);
   }
 
   render = () => {
@@ -27,11 +32,12 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 
 const mapStateToProps = (state: StatesReducers): HomeScreenProps => ({
   ...state.homeScreenReducer,
+  rmCpf: state.loginScreenReducer.rmCpf,
   name: state.loginScreenReducer.name,
 });
 
-// const mapDispatchToProps = (dispatch: Dispatch) => ({
-//   functions: bindActionCreators(LoginInitialState.functions!, dispatch),
-// });
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  functions: bindActionCreators(HomeScreenInitialState.functions!, dispatch),
+});
 
-export const HomeConnectedScreen = connect(mapStateToProps, null)(HomeScreen);
+export const HomeConnectedScreen = connect(mapStateToProps, mapDispatchToProps)(HomeScreen);

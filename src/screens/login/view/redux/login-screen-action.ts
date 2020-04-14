@@ -13,11 +13,11 @@ export interface LoginScreenActionType {
 type userType = "aluno" | "responsavel";
 
 export class LoginScreenAction {
-  static saveUser = (data: LoginResponseModel, raCpf: string, type: userType): LoginScreenActionType => ({
+  static saveUser = (data: LoginResponseModel, rmCpf: string, type: userType): LoginScreenActionType => ({
     type: LoginScreenActionConst.SAVE_USER,
     payload: {
       name: data.nome,
-      raCpf: raCpf,
+      rmCpf: rmCpf,
       token: data.token,
       type,
     },
