@@ -1,6 +1,6 @@
 import {HomeScreenProps} from "../model/home-screen-props";
 import {MomentController} from "../../../../helpers/moment-controller";
-import {SubjectsDayService} from "../../../../services/subjects-day/service";
+import {getSubjectsService} from "../../../../services/subjects-day/service";
 import {SubjectsDayRequestModel} from "../../../../services/subjects-day/request";
 import {ServiceStatus} from "../../../../services/model";
 
@@ -18,7 +18,7 @@ export class HomeScreenAction {
   static getSubjects = (rm: string, date: MomentController) => dispatch => {
     dispatch({type: HomeScreenActionConst.FETCH_SUBJECT});
 
-    SubjectsDayService.getSubjects(new SubjectsDayRequestModel({rm, date})).then(
+    getSubjectsService(new SubjectsDayRequestModel({rm, date})).then(
       response =>
         dispatch({
           type: HomeScreenActionConst.RECEIVE_SUBJECT,

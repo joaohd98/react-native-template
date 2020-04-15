@@ -5,7 +5,6 @@ import {ServiceStatus} from "../../../../services/model";
 import {LoginScreenAction} from "../../../login/view/redux/login-screen-action";
 
 export const HomeScreenInitialState: HomeScreenProps = {
-  name: "",
   selectedDate: new MomentController(),
   status: ServiceStatus.loading,
   functions: {

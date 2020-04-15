@@ -3,35 +3,35 @@ import axios from "axios";
 import {Helpers} from "../helpers/helpers";
 
 export class Service {
-  protected static makeGetRequest = async <ResponseType>(
+  static makeGetRequest = async <ResponseType>(
     url: string,
-    params: {[key: string]: string},
-    headers: HeadersInit_ = {}
+    params: {[key: string]: string} = {},
+    headers: {[key: string]: string} = {}
   ): Promise<ServiceResponse<ResponseType>> => Service.makeRequest<ResponseType>(url, "get", headers, params);
 
-  protected static makePostRequest = async <ResponseType>(
+  static makePostRequest = async <ResponseType>(
     url: string,
-    params: {[key: string]: string},
-    headers: HeadersInit_ = {}
+    params: {[key: string]: string} = {},
+    headers: {[key: string]: string} = {}
   ): Promise<ServiceResponse<ResponseType>> => Service.makeRequest<ResponseType>(url, "post", headers, params);
 
   private static makeRequest = async <ResponseType>(
     url: string,
     method: "post" | "get",
-    headers: HeadersInit_,
+    headers: {[key: string]: string},
     value: {}
   ): Promise<ServiceResponse<ResponseType>> => {
     try {
+
       const response = await axios({
         method,
         url,
         headers,
-        data: method === "post" ? value : {},
-        params: method === "get" ? value : {},
+        data: method === "post" ? value : null,
+        params: method === "get" ? value : null,
       });
 
       return {
-        status: ServiceStatus.success,
         data: response.data,
       };
     } catch {

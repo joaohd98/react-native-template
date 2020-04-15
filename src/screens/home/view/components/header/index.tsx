@@ -12,7 +12,7 @@ export const setHomeScreenHeader = (props: HomeScreenProps) => {
 
   const logoutUser = () => {
     functions.logoutUser();
-    navigation?.push(RoutesName.LoginScreen);
+    navigation?.navigate(RoutesName.GuestRoutes);
   };
 
   navigation!.setOptions({

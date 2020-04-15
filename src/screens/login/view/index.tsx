@@ -11,7 +11,7 @@ import {LoginScreenState} from "./model/login-screen-state";
 import {FormInput} from "../../../validation/form-input";
 import {RulesType} from "../../../validation/rules-type";
 import {ServiceStatus} from "../../../services/model";
-import {LoginService} from "../../../services/login/service";
+import {loginUserService} from "../../../services/login/service";
 import {LoginRequestModel} from "../../../services/login/request";
 import {bindActionCreators, Dispatch} from "redux";
 import {LoginInitialState} from "./redux/login-screen-reducer";
@@ -39,10 +39,10 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     const {rmCpf, password} = this.state;
     const {loginUser} = this.props.functions!;
 
-    LoginService.loginUser(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(
+    loginUserService(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(
       response => {
         loginUser(response.data!, rmCpf.value, "aluno");
-        navigation?.push(RoutesName.HomeScreen);
+        navigation?.navigate(RoutesName.LoggedRoutes);
       },
       ({message}) => this.setState({status: message})
     );

@@ -4,18 +4,18 @@ import {URL} from "../url";
 import {SubjectsDayRequestModel} from "./request";
 import {SubjectsDayResponseModel} from "./response";
 
-export class SubjectsDayService extends Service {
-  static getSubjects = async (request: SubjectsDayRequestModel): Promise<ServiceResponse<SubjectsDayResponseModel>> => {
-    const headers = new Headers({
-      "accept": "application/json",
-      "Content-Type": "application/json",
-    });
+type PromiseType = Promise<ServiceResponse<SubjectsDayResponseModel>>;
 
-    return new Promise((resolve, reject) => {
-      SubjectsDayService.makeGetRequest<SubjectsDayResponseModel>(URL.subjectsDay, request.getRequest(), headers).then(
-        response => resolve({data: new SubjectsDayResponseModel(response.data!)}),
-        error => reject(error)
-      );
-    });
+export const getSubjectsService = async (request: SubjectsDayRequestModel): PromiseType => {
+  const headers = {
+    "accept": "application/json",
+    "Content-Type": "application/json",
   };
-}
+
+  return new Promise((resolve, reject) => {
+    Service.makeGetRequest<SubjectsDayResponseModel>(URL.subjectsDay, request.getRequest(), headers).then(
+      response => resolve({data: new SubjectsDayResponseModel(response.data!)}),
+      error => reject(error)
+    );
+  });
+};
