@@ -3,7 +3,7 @@ import {LoginScreenAction, LoginScreenActionConst, LoginScreenActionType} from "
 
 export const LoginInitialState: LoginScreenProps = {
   functions: {
-    loginUser: (data, rmCpf, type) => LoginScreenAction.saveUser(data, rmCpf, type),
+    loginUser: (data, rmCpf, type, callback) => LoginScreenAction.saveUser(data, rmCpf, type, callback),
   },
 };
 

@@ -13,17 +13,22 @@ export interface LoginScreenActionType {
 }
 
 type userType = "aluno" | "responsavel";
+const {waitExecuteMethod} = Helpers;
 
 export class LoginScreenAction {
-  static saveUser = (data: LoginResponseModel, rmCpf: string, type: userType): LoginScreenActionType => ({
-    type: LoginScreenActionConst.SAVE_USER,
-    payload: {
-      rmCpf,
-      type,
-      name: data.nome,
-      token: data.token,
-    },
-  });
+  static saveUser = (data: LoginResponseModel, rmCpf: string, type: userType, callback: () => void) => dispatch => {
+    dispatch({
+      type: LoginScreenActionConst.SAVE_USER,
+      payload: {
+        rmCpf,
+        type,
+        name: data.nome,
+        token: data.token,
+      },
+    });
+
+    waitExecuteMethod(() => callback(), 500);
+  };
 
   static logoutUser = (callback: () => void) => dispatch => {
     callback();
