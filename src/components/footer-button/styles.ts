@@ -10,7 +10,7 @@ export const FooterButtonStyles = {
   LinearGradient: styled(LinearGradient)`
     border-radius: 100px;
     padding-vertical: 22px;
-    box-shadow: 0 2px 12px ${Colors.shadow};
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   `,
   Text: styled.Text<{isEnabled: boolean}>`
     font-family: ${Fonts.gotham.bold};

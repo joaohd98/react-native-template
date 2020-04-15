@@ -11,8 +11,8 @@ export const setHomeScreenHeader = (props: HomeScreenProps) => {
   const {LogoutButton, LogoutText} = HomeScreenHeaderStyles;
 
   const logoutUser = () => {
-    functions.logoutUser();
     navigation?.navigate(RoutesName.GuestRoutes);
+    functions.logoutUser(() => navigation?.navigate(RoutesName.GuestRoutes));
   };
 
   navigation!.setOptions({

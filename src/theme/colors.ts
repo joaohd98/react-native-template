@@ -8,5 +8,4 @@ export const Colors = {
   lightBold: "#91A3AD",
   lightMedium: "#F2F2F2",
   lightRegular: "#E0E0E0",
-  shadow: "rgba(0, 0, 0, 0.1)",
 };

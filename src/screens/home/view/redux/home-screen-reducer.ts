@@ -9,7 +9,7 @@ export const HomeScreenInitialState: HomeScreenProps = {
   status: ServiceStatus.loading,
   functions: {
     getSubjects: (rmCpf, date) => HomeScreenAction.getSubjects(rmCpf, date),
-    logoutUser: () => LoginScreenAction.logoutUser(),
+    logoutUser: callback => LoginScreenAction.logoutUser(callback),
   },
 };
 

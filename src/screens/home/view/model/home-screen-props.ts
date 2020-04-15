@@ -11,6 +11,6 @@ export interface HomeScreenProps extends PropsGlobal<"HomeScreen"> {
   status: ServiceStatus;
   functions: {
     getSubjects: (rmCpf: string, date: MomentController) => void;
-    logoutUser: () => void;
+    logoutUser: (callback: () => void) => void;
   };
 }

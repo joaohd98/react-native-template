@@ -7,7 +7,15 @@ export class Helpers {
   };
 
   static getFirstNameFormatted = (name: string) => {
-    const firstName = name.split(" ")[0];
-    return firstName.charAt(0).toUpperCase() + firstName.substring(1).toLowerCase();
+    if (name) {
+      const firstName = name.split(" ")[0];
+      return firstName.charAt(0).toUpperCase() + firstName.substring(1).toLowerCase();
+    } else {
+      return name;
+    }
+  };
+
+  static waitExecuteMethod = (callback: () => void, seconds: number) => {
+    setTimeout(() => callback(), seconds);
   };
 }

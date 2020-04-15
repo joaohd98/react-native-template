@@ -13,7 +13,7 @@ export interface StatesReducers {
 }
 
 const persistConfig = {
-  key: "root",
+  key: "login",
   storage: AsyncStorage,
   blacklist: ["functions"],
 };
@@ -27,6 +27,7 @@ const rootReducers = combineReducers({
 
 const reducers = (state, action) => {
   if (action.type === LoginScreenActionConst.LOGOUT_USER) {
+    AsyncStorage.removeItem("persist:login");
     state = undefined;
   }
 

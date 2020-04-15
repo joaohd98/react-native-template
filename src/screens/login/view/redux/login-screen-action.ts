@@ -1,5 +1,6 @@
 import {LoginScreenProps} from "../model/login-screen-props";
 import {LoginResponseModel} from "../../../../services/login/response";
+import {Helpers} from "../../../../helpers/helpers";
 
 export enum LoginScreenActionConst {
   SAVE_USER = "LoginScreenActionConst@SAVE_USER",
@@ -24,7 +25,8 @@ export class LoginScreenAction {
     },
   });
 
-  static logoutUser = () => ({
-    type: LoginScreenActionConst.LOGOUT_USER,
-  });
+  static logoutUser = (callback: () => void) => dispatch => {
+    callback();
+    Helpers.waitExecuteMethod(() => dispatch({type: LoginScreenActionConst.LOGOUT_USER}), 500);
+  };
 }
