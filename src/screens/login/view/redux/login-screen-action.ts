@@ -18,10 +18,10 @@ export class LoginScreenAction {
   static saveUser = (data: LoginResponseModel, rmCpf: string, type: userType): LoginScreenActionType => ({
     type: LoginScreenActionConst.SAVE_USER,
     payload: {
-      name: data.nome,
-      rmCpf: rmCpf,
-      token: data.token,
+      rmCpf,
       type,
+      name: data.nome,
+      token: data.token,
     },
   });
 
