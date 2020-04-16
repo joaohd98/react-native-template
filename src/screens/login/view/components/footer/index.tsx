@@ -15,35 +15,6 @@ interface Props {
 }
 
 export class LoginScreenFormFooter extends React.Component<Props> {
-  getStatusMessage = () => {
-    const {status} = this.props;
-    const {
-      exceptionFirstText,
-      exceptionSecondText,
-      noInternetConnectionFirstText,
-      noInternetConnectionSecondText,
-    } = LoginScreenFormFooterConst;
-    const {MessageView, MessageText} = LoginScreenFormFooterStyles;
-
-    if (status === ServiceStatus.exception) {
-      return (
-        <MessageView>
-          <MessageText>{exceptionFirstText}</MessageText>
-          <MessageText>{exceptionSecondText}</MessageText>
-        </MessageView>
-      );
-    } else if (status === ServiceStatus.noInternetConnection) {
-      return (
-        <MessageView>
-          <MessageText>{noInternetConnectionFirstText}</MessageText>
-          <MessageText>{noInternetConnectionSecondText}</MessageText>
-        </MessageView>
-      );
-    } else {
-      return <></>;
-    }
-  };
-
   getPasswordText = () => {
     const {ForgotPasswordButton, ForgotPasswordText} = LoginScreenFormFooterStyles;
     const {forgotPassword} = LoginScreenFormFooterConst;
@@ -95,7 +66,6 @@ export class LoginScreenFormFooter extends React.Component<Props> {
 
   render = () => (
     <>
-      {this.getStatusMessage()}
       {this.getPasswordText()}
       {this.getFooterButton()}
     </>

@@ -10,11 +10,30 @@ interface Props {
 }
 
 export class LoginScreenInputPassword extends React.Component<Props> {
+  getStatusMessage = () => {
+    const {exceptionText, noInternetConnectionText} = LoginScreenInputPasswordConst;
+    const {status} = this.props;
+
+    const warningMessages = {
+      [ServiceStatus.exception]: exceptionText,
+      [ServiceStatus.noInternetConnection]: noInternetConnectionText,
+    };
+
+    return warningMessages[status];
+  };
+
   render = () => {
     const {Input} = LoginScreenInputPasswordStyles;
     const {label} = LoginScreenInputPasswordConst;
     const {input, status} = this.props;
 
-    return <Input label={label} input={input} isLoading={status === ServiceStatus.loading} />;
+    return (
+      <Input
+        label={label}
+        input={input}
+        warningMessage={this.getStatusMessage()}
+        isLoading={status === ServiceStatus.loading}
+      />
+    );
   };
 }

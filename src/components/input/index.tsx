@@ -8,12 +8,15 @@ interface Props {
   label?: string;
   style?: ViewStyle;
   isLoading?: boolean;
+  warningMessage?: string;
 }
 
 export class CustomInput extends React.Component<Props> {
+  getWarningMessage = () => {};
+
   render = () => {
-    const {View, Label, Input} = InputComponentStyle;
-    const {label, input, style, isLoading} = this.props;
+    const {View, Label, Input, MessageText, MessageView} = InputComponentStyle;
+    const {label, input, style, isLoading, warningMessage} = this.props;
 
     return (
       <View style={style}>
@@ -28,6 +31,11 @@ export class CustomInput extends React.Component<Props> {
           onBlur={() => (input.isFocused = false)}
           onFocus={() => (input.isFocused = true)}
         />
+        {warningMessage !== undefined && (
+          <MessageView>
+            <MessageText>{warningMessage}</MessageText>
+          </MessageView>
+        )}
       </View>
     );
   };

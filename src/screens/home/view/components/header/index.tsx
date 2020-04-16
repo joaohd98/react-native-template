@@ -10,14 +10,12 @@ export const setHomeScreenHeader = (props: HomeScreenProps) => {
   const {logoutText} = HomeScreenHeaderConst;
   const {LogoutButton, LogoutText} = HomeScreenHeaderStyles;
 
-  const logoutUser = () => {
-    navigation?.navigate(RoutesName.GuestRoutes);
-    functions.logoutUser(() => navigation?.navigate(RoutesName.GuestRoutes));
-  };
-
   navigation!.setOptions({
     headerLeft: () => (
-      <LogoutButton activeOpacity={0.6} onPress={logoutUser}>
+      <LogoutButton
+        activeOpacity={0.6}
+        onPress={() => functions.logoutUser(() => navigation?.push(RoutesName.GuestRoutes))}
+      >
         <LogoutText>{logoutText}</LogoutText>
       </LogoutButton>
     ),

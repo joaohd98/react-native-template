@@ -41,10 +41,14 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
 
     this.setState({status: ServiceStatus.loading});
 
-    loginUserService(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(
-      response => loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.navigate(RoutesName.LoggedRoutes)),
-      ({message}) => this.setState({status: message})
-    );
+    const onSuccess = response => {
+      loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.push(RoutesName.LoggedRoutes));
+    };
+    const onError = error => {
+      this.setState({status: error.message});
+    };
+
+    loginUserService(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(onSuccess, onError);
   };
 
   render() {

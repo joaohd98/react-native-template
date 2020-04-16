@@ -4,17 +4,6 @@ import {Colors} from "../../../../../theme/colors";
 import {CustomText} from "../../../../../components/text";
 
 export const LoginScreenFormFooterStyles = {
-  MessageView: styled.View`
-    margin-vertical: 5px;
-  `,
-  MessageText: styled(CustomText)`
-    font-family: ${Fonts.roboto.regular};
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
-    letter-spacing: 0.01px;
-    color: ${Colors.primary};
-  `,
   ForgotPasswordButton: styled.TouchableOpacity`
     margin-vertical: 25px;
   `,

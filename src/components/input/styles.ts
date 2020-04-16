@@ -26,4 +26,15 @@ export const InputComponentStyle = {
     font-size: 20px;
     padding: 5px 5px 15px 5px;
   `,
+  MessageView: styled.View`
+    margin-vertical: 20px;
+  `,
+  MessageText: styled(CustomText)`
+    font-family: ${Fonts.roboto.regular};
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.01px;
+    color: ${Colors.primary};
+  `,
 };
