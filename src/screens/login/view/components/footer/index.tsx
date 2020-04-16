@@ -53,7 +53,7 @@ export class LoginScreenFormFooter extends React.Component<Props> {
             <ForgotPasswordText isLoading={status === ServiceStatus.loading}>{forgotPassword}</ForgotPasswordText>
           )}
         </ForgotPasswordButton>
-        <FooterButton isEnabled={isSubmitEnabled} text={footerText} onPress={() => onSubmit()} />
+        <FooterButton isEnabled={isSubmitEnabled} text={footerText} status={status} onPress={() => onSubmit()} />
       </>
     );
   };

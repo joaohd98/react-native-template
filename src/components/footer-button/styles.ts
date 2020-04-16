@@ -7,6 +7,8 @@ export const FooterButtonStyles = {
   TouchableOpacity: styled.TouchableOpacity``,
   LinearGradient: styled(LinearGradient)`
     padding-vertical: 22px;
+    height: 65px;
+    align-items: center;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   `,
   Text: styled.Text<{isEnabled: boolean}>`
