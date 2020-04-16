@@ -49,16 +49,20 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     const {rmCpf, password, status} = this.state;
 
     return (
-      <Container>
-        <LoginScreenFormContainer textVisible={!rmCpf.isFocused && !password.isFocused}>
-          <LoginScreenInputRaCpf input={rmCpf} />
-          <LoginScreenInputPassword input={password} />
+      <Container
+        footerHeight={50}
+        footerContent={
           <LoginScreenFormFooter
             status={status}
             onSubmit={this.loginUser}
             isSubmitEnabled={rmCpf.isValid() && password.isValid()}
             visibleForgotPassword={!rmCpf.isFocused && !password.isFocused}
           />
+        }
+      >
+        <LoginScreenFormContainer textVisible={!rmCpf.isFocused && !password.isFocused}>
+          <LoginScreenInputRaCpf input={rmCpf} />
+          <LoginScreenInputPassword input={password} />
         </LoginScreenFormContainer>
       </Container>
     );
