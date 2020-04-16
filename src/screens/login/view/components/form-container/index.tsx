@@ -1,10 +1,10 @@
 import React from "react";
-import {PropsGlobal} from "../../../../../helpers/props-global";
 import {LoginScreenFormContainerConstants} from "./const";
 import {LoginScreenFormContainerStyles} from "./styles";
 
-interface Props extends PropsGlobal {
+interface Props {
   textVisible: boolean;
+  children: JSX.Element;
 }
 
 export class LoginScreenFormContainer extends React.Component<Props> {

@@ -25,7 +25,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
     const {name, status, subjectDay, selectedDate} = this.props;
 
     return (
-      <Container>
+      <Container scrollEnabled={true}>
         <HomeScreenHelloText name={name!} />
         <HomeScreenSubjectsList
           status={status}

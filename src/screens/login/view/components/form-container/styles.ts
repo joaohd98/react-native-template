@@ -4,7 +4,7 @@ import {Fonts} from "../../../../../theme/fonts";
 
 export const LoginScreenFormContainerStyles = {
   ContainerView: styled.View`
-    margin-top: 10%;
+    margin-top: 30%;
   `,
   TitleView: styled.Text`
     font-size: 27px;

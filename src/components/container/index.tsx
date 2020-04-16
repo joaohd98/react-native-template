@@ -9,6 +9,8 @@ interface Props {
   children?: JSX.Element[] | JSX.Element;
   footerContent?: JSX.Element | JSX.Element[];
   footerHeight?: number;
+  backgroundColor?: string;
+  scrollEnabled?: boolean;
 }
 
 interface State {
@@ -26,13 +28,17 @@ export class Container extends React.Component<Props, State> {
   listenerHide: EmitterSubscription;
 
   componentDidMount() {
-    this.listenerShow = Keyboard.addListener("keyboardDidShow", this.keyboardDidShow);
-    this.listenerHide = Keyboard.addListener("keyboardDidHide", this.keyboardDidHide);
+    if (this.props.footerContent !== undefined) {
+      this.listenerShow = Keyboard.addListener("keyboardDidShow", this.keyboardDidShow);
+      this.listenerHide = Keyboard.addListener("keyboardDidHide", this.keyboardDidHide);
+    }
   }
 
   componentWillUnmount() {
-    this.listenerShow.remove();
-    this.listenerHide.remove();
+    if (this.props.footerContent !== undefined) {
+      this.listenerShow.remove();
+      this.listenerHide.remove();
+    }
   }
 
   keyboardDidHide = () => {
@@ -61,17 +67,19 @@ export class Container extends React.Component<Props, State> {
 
   render = () => {
     const {View, KeyboardAvoidingView, ScrollView, ContentView} = ContainerStyle;
-    const {children, style, footerContent, footerHeight} = this.props;
+    const {children, style, footerContent, footerHeight, backgroundColor, scrollEnabled} = this.props;
     const {offset, marginBottom} = this.state;
 
     return (
-      <View onLayout={this.onLayout}>
+      <View backgroundColor={backgroundColor} onLayout={footerContent !== undefined ? this.onLayout : () => {}}>
         <KeyboardAvoidingView
           behavior={Platform.select({ios: "padding", android: undefined})}
-          keyboardVerticalOffset={footerContent ? offset + marginBottom : 0}
+          keyboardVerticalOffset={footerContent !== undefined ? offset + marginBottom : 0}
         >
-          <ScrollView keyboardShouldPersistTaps="handled" scrollEnabled={false}>
-            <ContentView style={style} marginBottom={footerHeight}>{children}</ContentView>
+          <ScrollView keyboardShouldPersistTaps="handled" scrollEnabled={scrollEnabled ? scrollEnabled : false}>
+            <ContentView style={style} backgroundColor={backgroundColor} marginBottom={footerHeight}>
+              {children}
+            </ContentView>
             {this.getFooterContent()}
           </ScrollView>
         </KeyboardAvoidingView>
