@@ -1,12 +1,13 @@
 import styled from "styled-components/native";
 import {Fonts} from "../../../../../theme/fonts";
 import {Colors} from "../../../../../theme/colors";
+import {CustomText} from "../../../../../components/text";
 
 export const LoginScreenFormFooterStyles = {
   MessageView: styled.View`
     margin-vertical: 5px;
   `,
-  MessageText: styled.Text`
+  MessageText: styled(CustomText)`
     font-family: ${Fonts.roboto.regular};
     font-size: 16px;
     line-height: 22px;
@@ -15,9 +16,9 @@ export const LoginScreenFormFooterStyles = {
     color: ${Colors.primary};
   `,
   ForgotPasswordButton: styled.TouchableOpacity`
-    margin-vertical: 50px;
+    margin-vertical: 25px;
   `,
-  ForgotPasswordText: styled.Text`
+  ForgotPasswordText: styled(CustomText)`
     font-family: ${Fonts.roboto.regular};
     font-size: 18px;
     line-height: 20px;

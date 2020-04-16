@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 import {Fonts} from "../../../../../theme/fonts";
 import {Colors} from "../../../../../theme/colors";
 import {TryAgain} from "../../../../../components/try-again";
+import {CustomText} from "../../../../../components/text";
 
 export const HomeScreenSubjectsListStyles = {
   List: styled.View`
@@ -11,7 +12,7 @@ export const HomeScreenSubjectsListStyles = {
     padding-horizontal: 16px;
     margin-horizontal: 16px;
   `,
-  ListTitleText: styled.Text`
+  ListTitleText: styled(CustomText)`
     font-family: ${Fonts.gotham.medium};
     font-size: 18px;
     line-height: 20px;
@@ -45,7 +46,7 @@ export const HomeScreenSubjectsListStyles = {
     display: flex;
     flex-direction: row;
   `,
-  SubjectHoursText: styled.Text`
+  SubjectHoursText: styled(CustomText)`
     font-family: ${Fonts.metronicSlab.regular};
     font-size: 14px;
     line-height: 16px;
@@ -55,7 +56,7 @@ export const HomeScreenSubjectsListStyles = {
     color: ${Colors.lightBold};
     margin-right: 10px;
   `,
-  SubjectNameText: styled.Text`
+  SubjectNameText: styled(CustomText)`
     font-family: ${Fonts.roboto.regular};
     font-size: 22px;
     line-height: 26px;

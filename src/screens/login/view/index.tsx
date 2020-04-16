@@ -39,6 +39,8 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     const {rmCpf, password} = this.state;
     const {loginUser} = this.props.functions!;
 
+    this.setState({status: ServiceStatus.loading});
+
     loginUserService(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(
       response => loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.navigate(RoutesName.LoggedRoutes)),
       ({message}) => this.setState({status: message})
@@ -60,9 +62,9 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
           />
         }
       >
-        <LoginScreenFormContainer textVisible={!rmCpf.isFocused && !password.isFocused}>
-          <LoginScreenInputRaCpf input={rmCpf} />
-          <LoginScreenInputPassword input={password} />
+        <LoginScreenFormContainer status={status} textVisible={!rmCpf.isFocused && !password.isFocused}>
+          <LoginScreenInputRaCpf input={rmCpf} status={status} />
+          <LoginScreenInputPassword input={password} status={status} />
         </LoginScreenFormContainer>
       </Container>
     );

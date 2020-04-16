@@ -11,6 +11,7 @@ interface Props {
   footerHeight?: number;
   backgroundColor?: string;
   scrollEnabled?: boolean;
+  isLoading?: boolean;
 }
 
 interface State {

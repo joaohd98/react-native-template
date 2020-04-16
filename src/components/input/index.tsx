@@ -4,20 +4,22 @@ import {FormInput} from "../../validation/form-input";
 import {ViewStyle} from "react-native";
 
 interface Props {
-  label?: string;
   input: FormInput;
+  label?: string;
   style?: ViewStyle;
+  isLoading?: boolean;
 }
 
 export class CustomInput extends React.Component<Props> {
   render = () => {
     const {View, Label, Input} = InputComponentStyle;
-    const {label, input, style} = this.props;
+    const {label, input, style, isLoading} = this.props;
 
     return (
       <View style={style}>
-        {label !== undefined && <Label>{label}</Label>}
+        {label !== undefined && <Label isLoading={isLoading}>{label}</Label>}
         <Input
+          isLoading={isLoading}
           value={input.value}
           onChangeText={text => (input.value = text)}
           secureTextEntry={input.isPassword}
