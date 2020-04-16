@@ -1,5 +1,6 @@
 import {RulesType} from "./rules-type";
 import {Rules} from "./rules";
+import {TextInput} from "react-native";
 
 type typesKeyboard = "default" | "number-pad" | "decimal-pad" | "numeric" | "email-address" | "phone-pad";
 
@@ -10,6 +11,7 @@ export enum FormInputStatus {
 }
 
 export class FormInput {
+  private _ref: TextInput;
   private _value = "";
   private _isFocused = false;
   private _status: FormInputStatus = FormInputStatus.none;
@@ -25,6 +27,14 @@ export class FormInput {
 
   constructor(init?: Partial<FormInput>) {
     Object.assign(this, init!);
+  }
+
+  get ref(): TextInput {
+    return this._ref;
+  }
+
+  set ref(value: TextInput) {
+    this._ref = value;
   }
 
   get value(): string {

@@ -19,6 +19,7 @@ export class CustomInput extends React.Component<Props> {
       <View style={style}>
         {label !== undefined && <Label isLoading={isLoading}>{label}</Label>}
         <Input
+          ref={ref => (input.ref = ref!)}
           isLoading={isLoading}
           value={input.value}
           onChangeText={text => (input.value = text)}

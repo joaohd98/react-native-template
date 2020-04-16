@@ -68,11 +68,15 @@ export class Container extends React.Component<Props, State> {
 
   render = () => {
     const {View, KeyboardAvoidingView, ScrollView, ContentView} = ContainerStyle;
-    const {children, style, footerContent, footerHeight, backgroundColor, scrollEnabled} = this.props;
+    const {children, style, footerContent, footerHeight, isLoading, backgroundColor, scrollEnabled} = this.props;
     const {offset, marginBottom} = this.state;
 
     return (
-      <View backgroundColor={backgroundColor} onLayout={footerContent !== undefined ? this.onLayout : () => {}}>
+      <View
+        backgroundColor={backgroundColor}
+        pointerEvents={isLoading ? "none" : "auto"}
+        onLayout={footerContent !== undefined ? this.onLayout : () => {}}
+      >
         <KeyboardAvoidingView
           behavior={Platform.select({ios: "padding", android: undefined})}
           keyboardVerticalOffset={footerContent !== undefined ? offset + marginBottom : 0}

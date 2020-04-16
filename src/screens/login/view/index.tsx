@@ -52,9 +52,12 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
 
     return (
       <Container
+        isLoading={status === ServiceStatus.loading}
         footerHeight={50}
         footerContent={
           <LoginScreenFormFooter
+            rmCpfInput={rmCpf}
+            passwordInput={password}
             status={status}
             onSubmit={this.loginUser}
             isSubmitEnabled={rmCpf.isValid() && password.isValid()}
