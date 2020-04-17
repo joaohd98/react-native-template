@@ -9,7 +9,6 @@ interface Props {
 }
 
 export class CustomText extends React.Component<Props> {
-
   render = () => {
     const {style, isLoading, children} = this.props;
     const {TextWithLoading} = CustomTextStyles;

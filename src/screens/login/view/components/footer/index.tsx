@@ -6,12 +6,12 @@ import {ServiceStatus} from "../../../../../services/model";
 import {FormInput} from "../../../../../validation/form-input";
 
 interface Props {
-  status: ServiceStatus;
   rmCpfInput: FormInput;
   passwordInput: FormInput;
-  onSubmit: () => void;
+  status: ServiceStatus;
   visibleForgotPassword: boolean;
   isSubmitEnabled: boolean;
+  onSubmit: () => void;
 }
 
 export class LoginScreenFormFooter extends React.Component<Props> {

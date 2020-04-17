@@ -11,7 +11,7 @@
     "android-store": "npm run set-env-prod react-native run-android",
     "start": "react-native start",
     "test": "jest --silent --detectOpenHandles",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@react-native-community/async-storage": "1.8.1",

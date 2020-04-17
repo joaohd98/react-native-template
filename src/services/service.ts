@@ -22,7 +22,6 @@ export class Service {
     value: {}
   ): Promise<ServiceResponse<ResponseType>> => {
     try {
-
       const response = await axios({
         method,
         url,

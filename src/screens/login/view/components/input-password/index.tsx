@@ -7,19 +7,20 @@ import {ServiceStatus} from "../../../../../services/model";
 interface Props {
   input: FormInput;
   status: ServiceStatus;
+  noInputsFocus: boolean;
 }
 
 export class LoginScreenInputPassword extends React.Component<Props> {
   getStatusMessage = () => {
     const {exceptionText, noInternetConnectionText} = LoginScreenInputPasswordConst;
-    const {status} = this.props;
+    const {status, noInputsFocus} = this.props;
 
     const warningMessages = {
       [ServiceStatus.exception]: exceptionText,
       [ServiceStatus.noInternetConnection]: noInternetConnectionText,
     };
 
-    return warningMessages[status];
+    return noInputsFocus ? warningMessages[status] : "";
   };
 
   render = () => {

@@ -5,7 +5,8 @@ import {CustomText} from "../../../../../components/text";
 
 export const LoginScreenFormFooterStyles = {
   ForgotPasswordButton: styled.TouchableOpacity`
-    margin-vertical: 25px;
+    margin: 25px auto;
+    padding: 10px 30px;
   `,
   ForgotPasswordText: styled(CustomText)`
     font-family: ${Fonts.roboto.regular};

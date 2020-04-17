@@ -24,9 +24,6 @@ export const LoggedRoutes = () => (
       },
     }}
   >
-    <Stack.Screen
-      name={RoutesName.HomeScreen}
-      component={HomeConnectedScreen}
-    />
+    <Stack.Screen name={RoutesName.HomeScreen} component={HomeConnectedScreen} />
   </Stack.Navigator>
 );

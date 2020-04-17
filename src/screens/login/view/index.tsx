@@ -16,6 +16,7 @@ import {LoginRequestModel} from "../../../services/login/request";
 import {bindActionCreators, Dispatch} from "redux";
 import {LoginInitialState} from "./redux/login-screen-reducer";
 import {RoutesName} from "../../../routes/routes-name";
+import {Keyboard} from "react-native";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -35,6 +36,8 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
   };
 
   loginUser = () => {
+    Keyboard.dismiss();
+
     const {navigation} = this.props;
     const {rmCpf, password} = this.state;
     const {loginUser} = this.props.functions!;
@@ -53,6 +56,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
 
   render() {
     const {rmCpf, password, status} = this.state;
+    const hasNoFocus = !rmCpf.isFocused && !password.isFocused;
 
     return (
       <Container
@@ -65,13 +69,13 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
             status={status}
             onSubmit={this.loginUser}
             isSubmitEnabled={rmCpf.isValid() && password.isValid()}
-            visibleForgotPassword={!rmCpf.isFocused && !password.isFocused}
+            visibleForgotPassword={hasNoFocus}
           />
         }
       >
-        <LoginScreenFormContainer status={status} textVisible={!rmCpf.isFocused && !password.isFocused}>
+        <LoginScreenFormContainer status={status} textVisible={hasNoFocus}>
           <LoginScreenInputRaCpf input={rmCpf} status={status} />
-          <LoginScreenInputPassword input={password} status={status} />
+          <LoginScreenInputPassword input={password} status={status} noInputsFocus={hasNoFocus} />
         </LoginScreenFormContainer>
       </Container>
     );

@@ -23,7 +23,7 @@ export class TryAgain extends React.Component<Props> {
           <TitleText>{oops}</TitleText>
         </TitleView>
         <MessageText>{message}</MessageText>
-        <ButtonTouchableOpacity activeOpacity={0.7} onPress={() => onPress()} >
+        <ButtonTouchableOpacity activeOpacity={0.7} onPress={() => onPress()}>
           <ButtonText>{buttonText}</ButtonText>
         </ButtonTouchableOpacity>
       </Container>
