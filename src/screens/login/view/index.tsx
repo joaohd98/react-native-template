@@ -21,13 +21,11 @@ import {Keyboard} from "react-native";
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
     rmCpf: new FormInput({
-      value: "13202",
       changeInput: value => this.setState({rmCpf: value}),
       rules: [{type: RulesType.required}],
       keyboardType: "number-pad",
     }),
     password: new FormInput({
-      value: "020310",
       changeInput: value => this.setState({password: value}),
       rules: [{type: RulesType.required}],
       isPassword: true,

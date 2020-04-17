@@ -29,7 +29,7 @@ export class LoginScreenFormFooter extends React.Component<Props> {
     );
   };
 
-  getFooterButton = () => {
+  getSubmitButton = () => {
     const {footerText, footerTextNext, footerTextError} = LoginScreenFormFooterConst;
     const {isSubmitEnabled, onSubmit, status, rmCpfInput, passwordInput} = this.props;
 
@@ -67,7 +67,7 @@ export class LoginScreenFormFooter extends React.Component<Props> {
   render = () => (
     <>
       {this.getPasswordText()}
-      {this.getFooterButton()}
+      {this.getSubmitButton()}
     </>
   );
 }
