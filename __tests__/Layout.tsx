@@ -9,6 +9,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 import {Layout} from "../src/layout";
 
-it("renders correctly", async () => {
+it("layout render correctly", async () => {
   renderer.create(<Layout />);
 });

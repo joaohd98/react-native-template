@@ -6,5 +6,11 @@ const mockRNCNetInfoMock = require("@react-native-community/netinfo/jest/netinfo
 
 jest.mock("@react-native-community/netinfo", () => mockRNCNetInfoMock);
 jest.mock("@react-native-community/async-storage", () => mockAsyncStorage);
+jest.mock("react-native/Libraries/Animated/src/NativeAnimatedHelper");
+
+global.console = {
+  ...global.console,
+  error: jest.fn(),
+};
 
 configure({adapter: new Adapter()});

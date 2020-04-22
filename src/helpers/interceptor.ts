@@ -1,7 +1,7 @@
 import axios, {AxiosRequestConfig} from "axios";
 import {store} from "../redux/configure-store";
 
-export const ConfigureInterceptor = () => {
+export const configureInterceptor = () => {
   axios.interceptors.request.use((config: AxiosRequestConfig) => {
     if (!config.url!.endsWith("token")) {
       config.headers = {

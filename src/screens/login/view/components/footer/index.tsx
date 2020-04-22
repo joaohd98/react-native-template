@@ -34,18 +34,28 @@ export class LoginScreenFormFooter extends React.Component<Props> {
     const {isSubmitEnabled, onSubmit, status, rmCpfInput, passwordInput} = this.props;
 
     const getProps = (): {text: string; onPress: () => void; isEnabled: boolean} => {
+      const defaultProps = {
+        text: footerText,
+        isEnabled: isSubmitEnabled,
+        onPress: () => onSubmit(),
+      };
+
       if (rmCpfInput && rmCpfInput.isFocused) {
-        return {
-          text: footerTextNext,
-          isEnabled: rmCpfInput.isValid(),
-          onPress: () => passwordInput.ref.focus(),
-        };
+        return passwordInput.isValid()
+          ? defaultProps
+          : {
+              text: footerTextNext,
+              isEnabled: rmCpfInput.isValid(),
+              onPress: () => passwordInput.ref.focus(),
+            };
       } else if (passwordInput && passwordInput.isFocused) {
-        return {
-          text: footerText,
-          isEnabled: isSubmitEnabled,
-          onPress: () => onSubmit(),
-        };
+        return rmCpfInput.isValid()
+          ? defaultProps
+          : {
+              text: footerTextNext,
+              isEnabled: passwordInput.isValid(),
+              onPress: () => rmCpfInput.ref.focus(),
+            };
       } else if (status === ServiceStatus.noInternetConnection || status === ServiceStatus.exception) {
         return {
           text: footerTextError,
@@ -53,11 +63,7 @@ export class LoginScreenFormFooter extends React.Component<Props> {
           onPress: () => onSubmit(),
         };
       } else {
-        return {
-          text: footerText,
-          isEnabled: isSubmitEnabled,
-          onPress: () => onSubmit(),
-        };
+        return defaultProps;
       }
     };
 

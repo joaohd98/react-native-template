@@ -8,11 +8,7 @@ import LoginScreen from "../..//src/screens/login/view";
 import {LoginScreenInputRaCpf} from "../../src/screens/login/view/components/input-ra-cpf";
 import {LoginScreenFormFooter} from "../../src/screens/login/view/components/footer";
 import {FooterButton} from "../../src/components/footer-button";
-import {CustomInput} from "../../src/components/input";
-import {TextInput} from "react-native";
-
-
-
+import {Text, TextInput, TouchableOpacity} from "react-native";
 
 describe("LoginScreen", () => {
   it("renders correctly", async () => {
@@ -28,17 +24,18 @@ describe("LoginScreen", () => {
   */
   it("Ativar campo RM", async () => {
     const wrapper = mount(<LoginScreen />);
-    wrapper.find(LoginScreenInputRaCpf).find(CustomInput).find(TextInput).props().onFocus();
+    wrapper.find(LoginScreenInputRaCpf).find(TextInput).simulate("focus");
     wrapper.update();
 
     const raCPf = wrapper.find(LoginScreenInputRaCpf);
-    const formFooter = wrapper.find(LoginScreenFormFooter);
-    const footerButton = formFooter.find(FooterButton);
+    const input = raCPf.find(TextInput);
+    const footerButton = wrapper.find(LoginScreenFormFooter).find(FooterButton).find(TouchableOpacity);
+    const footerButtonText = footerButton.find(Text);
 
     expect(raCPf.props().input.isFocused).toBeTruthy();
-    expect(raCPf.props().input.keyboardType).toEqual("number-pad");
-    expect(footerButton.props().text).toEqual("PRÓXIMO");
-    expect(footerButton.props().isEnabled).toBeFalsy();
+    expect(input.props().keyboardType).toEqual("number-pad");
+    expect(footerButton.props().disabled).toBeTruthy();
+    expect(footerButtonText.text()).toEqual("PRÓXIMO");
   });
   /*
     Primeira ação: Ativar campo SENHA
@@ -49,9 +46,60 @@ describe("LoginScreen", () => {
 
     https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=3713%3A0
   */
-
+  // it("Ativar campo senha", async () => {
+  //   const wrapper = mount(<LoginScreen />);
+  //   wrapper.find(LoginScreenInputPassword).find(TextInput).props().onFocus();
+  //   wrapper.update();
+  //
+  //   const raCPf = wrapper.find(LoginScreenInputPassword);
+  //   const formFooter = wrapper.find(LoginScreenFormFooter);
+  //   const footerButton = formFooter.find(FooterButton);
+  //
+  //   expect(raCPf.props().input.isFocused).toBeTruthy();
+  //   expect(raCPf.props().input.keyboardType).toEqual("default");
+  //   expect(footerButton.props().text).toEqual("PRÓXIMO");
+  //   expect(footerButton.props().isEnabled).toBeFalsy();
+  // });
   /*
-    Segunda ação: Ativar campo CPF
+   Segunda ação: Campo RM preenchido
+   Dado que o usuário está na tela de login de responsável, já preencheu o campo CPF e toca no campo SENHA ou no botão PRÓXIMO,
+   Então o campo deve ser exibido em seu estado focus,
+   E o teclado do dispositivo deve ser trazido em formato padrão,
+   E, acima do teclado, o botão de FAZER LOGIN deve ser ser exibido, em seu estado desabilitado.
+   https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1029%3A17939
+ */
+  // it("Campo RM Preencido", async () => {
+  //   const wrapper = mount(<LoginScreen />);
+  //
+  //   let raCPf = wrapper.find(LoginScreenInputRaCpf);
+  //   let password = wrapper.find(LoginScreenInputPassword);
+  //   let formFooter = wrapper.find(LoginScreenFormFooter);
+  //   let footerButton = formFooter.find(FooterButton);
+  //
+  //   raCPf.find(TextInput).props().onFocus();
+  //   raCPf.find(TextInput).props().onChangeText("12345");
+  //   password.find(TextInput).instance().focus();
+  //   wrapper.update();
+  //
+  //   raCPf = wrapper.find(LoginScreenInputRaCpf);
+  //   password = wrapper.find(LoginScreenInputPassword);
+  //   formFooter = wrapper.find(LoginScreenFormFooter);
+  //   footerButton = formFooter.find(FooterButton);
+  //
+  //   console.log(raCPf.props());
+  //   console.log(password.props());
+  //   console.log(formFooter.props());
+  //   console.log(footerButton.props());
+  //   console.log(footerButton.find(TouchableOpacity).props().onPress);
+  //
+  //   expect(raCPf.props().input.isFocused).toBeFalsy();
+  //   expect(password.props().input.isFocused).toBeTruthy();
+  //   expect(password.props().input.keyboardType).toEqual("default");
+  //   expect(footerButton.props().text).toEqual("FAZER LOGIN");
+  //   expect(footerButton.props().isEnabled).toBeFalsy();
+  // });
+  /*
+    Segunda ação: campo RM preenchido
     Dado que o usuário está na tela de login de responsável, já preencheu o campo SENHA e toca no campo CPF ou no botão PRÓXIMO,
     Então o campo deve ser exibido em seu estado focus,
     E o teclado do dispositivo deve ser trazido em formato numérico,
@@ -59,17 +107,6 @@ describe("LoginScreen", () => {
 
     https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=3714%3A180
   */
-
-  /*
-    Segunda ação: Ativar campo SENHA
-    Dado que o usuário está na tela de login de responsável, já preencheu o campo CPF e toca no campo SENHA ou no botão PRÓXIMO,
-    Então o campo deve ser exibido em seu estado focus,
-    E o teclado do dispositivo deve ser trazido em formato padrão,
-    E, acima do teclado, o botão de FAZER LOGIN deve ser ser exibido, em seu estado desabilitado.
-
-    https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1029%3A17939
-  */
-
   /*
     Inserir número no formato completo de CPF
     Dado que o usuário está com o campo CPF ativo e insere um número no formato correto,

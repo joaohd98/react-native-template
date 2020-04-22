@@ -33,7 +33,7 @@ export class FooterButton extends React.Component<Props> {
     const {onPress} = this.props;
 
     return (
-      <TouchableOpacity activeOpacity={0.8} disabled={this.checkCanSubmit()} onPress={() => onPress()}>
+      <TouchableOpacity activeOpacity={0.8} disabled={this.checkCanSubmit()} onPress={onPress}>
         <LinearGradient colors={[Colors.primary, Colors.primaryGradient]} angle={180}>
           {this.getContent()}
         </LinearGradient>

@@ -10,7 +10,7 @@
     "android-dev": "npm run set-env-dev react-native run-android",
     "android-store": "npm run set-env-prod react-native run-android",
     "start": "react-native start",
-    "test": "jest --silent --detectOpenHandles",
+    "test": "jest --detectOpenHandles",
     "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {

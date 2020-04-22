@@ -8,14 +8,14 @@ import {createStackNavigator} from "@react-navigation/stack";
 import {StatusBar} from "react-native";
 import {GuestRoutes} from "../routes/guest-routes";
 import {LoggedRoutes} from "../routes/logged-routes";
-import {ConfigureInterceptor} from "../helpers/interceptor";
+import {configureInterceptor} from "../helpers/interceptor";
 import {RoutesName} from "../routes/routes-name";
 
 const Stack = createStackNavigator();
 
 export const Layout = () => {
   useEffect(() => {
-    ConfigureInterceptor();
+    configureInterceptor();
   }, []);
 
   return (
