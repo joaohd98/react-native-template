@@ -22,7 +22,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
   state = {
     rmCpf: new FormInput({
       changeInput: value => this.setState({rmCpf: value}),
-      rules: [{type: RulesType.required}],
+      rules: [{type: RulesType.required}, {type: RulesType.minLength, arg: 2}],
       keyboardType: "number-pad",
     }),
     password: new FormInput({
@@ -45,6 +45,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     const onSuccess = response => {
       loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.push(RoutesName.LoggedRoutes));
     };
+
     const onError = error => {
       this.setState({status: error.message});
     };

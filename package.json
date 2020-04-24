@@ -73,6 +73,9 @@
       "./jest-setup-file.js",
       "./node_modules/react-native-gesture-handler/jestSetup.js"
     ],
+    "moduleNameMapper": {
+      "\\.svg": "<rootDir>/__mocks__/svg-mock/svg-mock.js"
+    },
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|react-navigation|@react-navigation/.*)) | /node_modules/@react-native-community/async-storage/(?!(lib))"
     ],

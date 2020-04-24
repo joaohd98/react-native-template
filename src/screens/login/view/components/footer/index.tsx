@@ -46,7 +46,7 @@ export class LoginScreenFormFooter extends React.Component<Props> {
           : {
               text: footerTextNext,
               isEnabled: rmCpfInput.isValid(),
-              onPress: () => passwordInput.ref.focus(),
+              onPress: () => (passwordInput.isFocused = true),
             };
       } else if (passwordInput && passwordInput.isFocused) {
         return rmCpfInput.isValid()
@@ -54,7 +54,7 @@ export class LoginScreenFormFooter extends React.Component<Props> {
           : {
               text: footerTextNext,
               isEnabled: passwordInput.isValid(),
-              onPress: () => rmCpfInput.ref.focus(),
+              onPress: () => (rmCpfInput.isFocused = true),
             };
       } else if (status === ServiceStatus.noInternetConnection || status === ServiceStatus.exception) {
         return {

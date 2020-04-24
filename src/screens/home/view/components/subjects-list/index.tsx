@@ -37,16 +37,18 @@ export class HomeScreenSubjectsList extends React.Component<Props> {
     const {subjectDay} = this.props;
     const {SubjectView, SubjectHeaderView, SubjectHoursText, SubjectNameText} = HomeScreenSubjectsListStyles;
 
-    const elements: Element[] = [];
+    const elements: JSX.Element[] = [];
 
     if (subjectDay) {
       subjectDay.listaMateriasDia.forEach((subject, index) => {
+        const firstHour = subject.horaInicio.getFormattedValue("HH:mm");
+        const secondHour = subject.horaTermino.getFormattedValue("HH:mm");
+        const hours = `${firstHour} - ${secondHour}`;
+
         elements.push(
           <SubjectView key={index.toString()}>
             <SubjectHeaderView>
-              <SubjectHoursText>
-                {subject.horaInicio.getFormattedValue("HH:mm")} - {subject.horaTermino.getFormattedValue("HH:mm")}
-              </SubjectHoursText>
+              <SubjectHoursText>{hours}</SubjectHoursText>
             </SubjectHeaderView>
             <SubjectNameText>{subject.disciplina}</SubjectNameText>
           </SubjectView>

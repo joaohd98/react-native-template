@@ -3,9 +3,9 @@ import {CustomImg} from "../../assets/images";
 import {Animated, Easing} from "react-native";
 
 interface Props {
-  color: string;
-  width: number;
-  height: number;
+  color?: string;
+  width?: number;
+  height?: number;
 }
 
 interface State {

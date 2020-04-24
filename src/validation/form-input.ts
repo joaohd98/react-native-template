@@ -22,6 +22,7 @@ export class FormInput {
   private _changeInput: (value: FormInput) => void = () => {};
   private _rules: {
     type: RulesType;
+    arg?: any;
     message?: string;
   }[] = [];
 
@@ -53,6 +54,11 @@ export class FormInput {
 
   set isFocused(value: boolean) {
     this._isFocused = value;
+
+    if (value) {
+      this.ref.focus();
+    }
+
     this.changeInput(this);
   }
 
@@ -72,11 +78,11 @@ export class FormInput {
     this._warningMessage = value;
   }
 
-  get rules(): {type: RulesType; message?: string}[] {
+  get rules(): {type: RulesType; message?: string; arg?: any}[] {
     return this._rules;
   }
 
-  set rules(value: {type: RulesType; message?: string}[]) {
+  set rules(value: {type: RulesType; message?: string; arg?: any}[]) {
     this._rules = value;
   }
 
@@ -117,7 +123,7 @@ export class FormInput {
     this.warningMessage = undefined;
 
     for (const validator of this.rules) {
-      if (!Rules.validate(validator.type, this.value)) {
+      if (!Rules.validate(validator.type, this.value, validator.arg)) {
         this.status = FormInputStatus.invalid;
         this.warningMessage = validator.message;
         break;
