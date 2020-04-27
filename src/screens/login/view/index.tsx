@@ -15,7 +15,6 @@ import {loginUserService} from "../../../services/login/service";
 import {LoginRequestModel} from "../../../services/login/request";
 import {bindActionCreators, Dispatch} from "redux";
 import {LoginInitialState} from "./redux/login-screen-reducer";
-import {RoutesName} from "../../../routes/routes-name";
 import {Keyboard} from "react-native";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
@@ -43,7 +42,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     this.setState({status: ServiceStatus.loading});
 
     const onSuccess = response => {
-      loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.push(RoutesName.LoggedRoutes));
+      loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.push("LoggedRoutes"));
     };
 
     const onError = error => {

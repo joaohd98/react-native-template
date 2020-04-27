@@ -1,10 +1,10 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import {RoutesName} from "./routes-name";
 import {HomeConnectedScreen} from "../screens/home/view";
 import {Colors} from "../theme/colors";
+import {RouteStackParamList} from "./routes-name";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RouteStackParamList>();
 
 export const LoggedRoutes = () => (
   <Stack.Navigator
@@ -24,6 +24,6 @@ export const LoggedRoutes = () => (
       },
     }}
   >
-    <Stack.Screen name={RoutesName.HomeScreen} component={HomeConnectedScreen} />
+    <Stack.Screen name={"HomeScreen"} component={HomeConnectedScreen} />
   </Stack.Navigator>
 );

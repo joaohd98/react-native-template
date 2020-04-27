@@ -9,9 +9,9 @@ import {StatusBar} from "react-native";
 import {GuestRoutes} from "../routes/guest-routes";
 import {LoggedRoutes} from "../routes/logged-routes";
 import {configureInterceptor} from "../helpers/interceptor";
-import {RoutesName} from "../routes/routes-name";
+import {RouteStackParamList} from "../routes/routes-name";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RouteStackParamList>();
 
 export const Layout = () => {
   useEffect(() => {
@@ -24,8 +24,8 @@ export const Layout = () => {
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
           <StackPureNavigator>
-            <Stack.Screen name={RoutesName.GuestRoutes} component={GuestRoutes} />
-            <Stack.Screen name={RoutesName.LoggedRoutes} component={LoggedRoutes} />
+            <Stack.Screen name={"GuestRoutes"} component={GuestRoutes} />
+            <Stack.Screen name={"LoggedRoutes"} component={LoggedRoutes} />
           </StackPureNavigator>
         </NavigationContainer>
       </PersistGate>

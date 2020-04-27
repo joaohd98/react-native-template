@@ -220,10 +220,11 @@ describe("LoginScreen", () => {
   it("Acessar com dados válidos", async () => {
     const wrapper = mount(<LoginScreen />);
 
-    wrapper.find(LoginScreenInputRaCpf).find(TextInput).props().onChangeText("12345");
-    wrapper.find(LoginScreenInputPassword).find(TextInput).props().onChangeText("12345");
+    wrapper.find(LoginScreenInputRaCpf).find(TextInput).props().onChangeText("13202");
+    wrapper.find(LoginScreenInputPassword).find(TextInput).props().onChangeText("020310");
     wrapper.update();
 
+    // wrapper.find(FooterButton).instance().setProps({});
     // const promise = new Promise((resolve, reject) =>
     //   loginUserService(
     //     new LoginRequestModel({usuario: wrapper.state().rmCpf.value, senha: wrapper.state().password.value})

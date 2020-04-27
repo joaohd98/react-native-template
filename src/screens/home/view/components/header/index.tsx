@@ -3,7 +3,6 @@ import {HomeScreenHeaderStyles} from "./styles";
 import {HomeScreenHeaderConst} from "./const";
 import {CustomImg} from "../../../../../assets/images";
 import {HomeScreenProps} from "../../model/home-screen-props";
-import {RoutesName} from "../../../../../routes/routes-name";
 
 export const setHomeScreenHeader = (props: HomeScreenProps) => {
   const {navigation, functions} = props;
@@ -12,10 +11,7 @@ export const setHomeScreenHeader = (props: HomeScreenProps) => {
 
   navigation!.setOptions({
     headerLeft: () => (
-      <LogoutButton
-        activeOpacity={0.6}
-        onPress={() => functions.logoutUser(() => navigation?.push(RoutesName.GuestRoutes))}
-      >
+      <LogoutButton activeOpacity={0.6} onPress={() => functions.logoutUser(() => navigation?.push("GuestRoutes"))}>
         <LogoutText>{logoutText}</LogoutText>
       </LogoutButton>
     ),

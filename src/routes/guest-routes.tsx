@@ -1,10 +1,10 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import {RoutesName} from "./routes-name";
+import {RouteStackParamList} from "./routes-name";
 import {LoginConnectedScreen} from "../screens/login/view";
 import {Colors} from "../theme/colors";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RouteStackParamList>();
 
 export const GuestRoutes = () => (
   <Stack.Navigator
@@ -19,6 +19,6 @@ export const GuestRoutes = () => (
       },
     }}
   >
-    <Stack.Screen name={RoutesName.LoginScreen} component={LoginConnectedScreen} />
+    <Stack.Screen name={"LoginScreen"} component={LoginConnectedScreen} />
   </Stack.Navigator>
 );
