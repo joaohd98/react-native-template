@@ -18,4 +18,8 @@ export class Helpers {
   static waitExecuteMethod = (callback: () => void, seconds: number) => {
     setTimeout(() => callback(), seconds);
   };
+
+  static getJestNavigationProps = () => ({
+    push: jest.fn(),
+  });
 }

@@ -11,11 +11,10 @@ import {LoginScreenState} from "./model/login-screen-state";
 import {FormInput} from "../../../validation/form-input";
 import {RulesType} from "../../../validation/rules-type";
 import {ServiceStatus} from "../../../services/model";
-import {loginUserService} from "../../../services/login/service";
-import {LoginRequestModel} from "../../../services/login/request";
 import {bindActionCreators, Dispatch} from "redux";
 import {LoginInitialState} from "./redux/login-screen-reducer";
 import {Keyboard} from "react-native";
+import {Services} from "../../../services/url";
 
 export default class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
   state = {
@@ -32,24 +31,29 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
     status: ServiceStatus.noAction,
   };
 
+  componentDidUpdate(_, prevState: Readonly<LoginScreenState>): void {
+    if (prevState.status === ServiceStatus.loading && this.state.status === ServiceStatus.success) {
+      this.props.navigation?.push("LoggedRoutes");
+    }
+  }
+
   loginUser = () => {
     Keyboard.dismiss();
 
-    const {navigation} = this.props;
     const {rmCpf, password} = this.state;
     const {loginUser} = this.props.functions!;
 
     this.setState({status: ServiceStatus.loading});
 
     const onSuccess = response => {
-      loginUser(response.data!, rmCpf.value, "aluno", () => navigation?.push("LoggedRoutes"));
+      loginUser(response.data!, rmCpf.value, "aluno", () => this.setState({status: ServiceStatus.success}));
     };
 
     const onError = error => {
       this.setState({status: error.message});
     };
 
-    loginUserService(new LoginRequestModel({usuario: rmCpf.value, senha: password.value})).then(onSuccess, onError);
+    Services.login(rmCpf.value, password.value).then(onSuccess, onError);
   };
 
   render() {

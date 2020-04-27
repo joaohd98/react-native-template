@@ -14,6 +14,8 @@ import {ServiceStatus} from "../../src/services/model";
 import {SpinnerLoading} from "../../src/components/spinner-loading";
 import {LoginScreenFormContainer} from "../../src/screens/login/view/components/form-container";
 import {Container} from "../../src/components/container";
+import {LoginScreenInputPasswordConst} from "../../src/screens/login/view/components/input-password/const";
+import {Helpers} from "../../src/helpers/helpers";
 
 describe("LoginScreen", () => {
   it("Renderiza com sucesso", async () => {
@@ -191,7 +193,7 @@ describe("LoginScreen", () => {
 
     https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1063%3A20241
   */
-  it("Mostrar loading screen", async () => {
+  it("Aguardar retorno da validação dos dados", async () => {
     const wrapper = mount(<LoginScreen />);
 
     wrapper.setState({status: ServiceStatus.loading});
@@ -211,29 +213,19 @@ describe("LoginScreen", () => {
     expect(footerContent.find(SpinnerLoading)).toBeTruthy();
   });
   /*
-    Acessar com dados válidos
-    Dado que o usuário inseriu CPF e SENHA encontrados e validados no banco de dados,
-    Então o aplicativo deve direcioná-lo à tela inicial do aplicativo, na visão do responsável.
+   Acessar com dados válidos
+   Dado que o usuário inseriu CPF e SENHA encontrados e validados no banco de dados,
+   Então o aplicativo deve direcioná-lo à tela inicial do aplicativo, na visão do responsável.
 
-    https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1105%3A23050
+   https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1105%3A23050
   */
   it("Acessar com dados válidos", async () => {
-    const wrapper = mount(<LoginScreen />);
+    const wrapper = mount(<LoginScreen navigation={Helpers.getJestNavigationProps()} />);
 
-    wrapper.find(LoginScreenInputRaCpf).find(TextInput).props().onChangeText("13202");
-    wrapper.find(LoginScreenInputPassword).find(TextInput).props().onChangeText("020310");
-    wrapper.update();
+    wrapper.setState({status: ServiceStatus.loading});
+    wrapper.setState({status: ServiceStatus.success});
 
-    // wrapper.find(FooterButton).instance().setProps({});
-    // const promise = new Promise((resolve, reject) =>
-    //   loginUserService(
-    //     new LoginRequestModel({usuario: wrapper.state().rmCpf.value, senha: wrapper.state().password.value})
-    //   ).then(
-    //     () => resolve({status: ServiceStatus.success}),
-    //     () => reject({status: ServiceStatus.exception})
-    //   )
-    // );
-    // wrapper.find(LoginScreenFormFooter).find(FooterButton).props().onPress();
+    expect(wrapper.props().navigation.push).toHaveBeenCalledWith("LoggedRoutes");
   });
   /*
     Tentar acessar com dados inválidos
@@ -242,6 +234,14 @@ describe("LoginScreen", () => {
 
     https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1063%3A20272
   */
+  it("Tentar acessar com dados inválidos", async () => {
+    const wrapper = mount(<LoginScreen />);
+    wrapper.setState({status: ServiceStatus.exception});
+
+    const warningMessage = wrapper.find(LoginScreenInputPassword).find(Text).at(1);
+
+    expect(warningMessage.text()).toEqual(LoginScreenInputPasswordConst.exceptionText);
+  });
   /*
     Erro ao acessar
     Dado que o usuário inseriu um CPF no formato válido, algum dado no campo senha e tocou no botão FAZER LOGIN, mas o aplicativo encontrou um erro interno ou de conexão para realizar a verificação,
@@ -249,4 +249,13 @@ describe("LoginScreen", () => {
 
     https://www.figma.com/file/qW7CUV0P9VwW2Q8tay9c5f/App?node-id=1076%3A220
    */
+  it("Erro ao acessar", async () => {
+    const wrapper = mount(<LoginScreen />);
+
+    wrapper.setState({status: ServiceStatus.noInternetConnection});
+
+    const warningMessage = wrapper.find(LoginScreenInputPassword).find(Text).at(1);
+
+    expect(warningMessage.text()).toEqual(LoginScreenInputPasswordConst.noInternetConnectionText);
+  });
 });

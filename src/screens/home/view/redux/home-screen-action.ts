@@ -1,8 +1,7 @@
 import {HomeScreenProps} from "../model/home-screen-props";
 import {MomentController} from "../../../../helpers/moment-controller";
-import {getSubjectsService} from "../../../../services/subjects-day/service";
-import {SubjectsDayRequestModel} from "../../../../services/subjects-day/request";
 import {ServiceStatus} from "../../../../services/model";
+import {Services} from "../../../../services/url";
 
 export enum HomeScreenActionConst {
   FETCH_SUBJECT = "HomeScreenActionConst@FETCH_SUBJECT",
@@ -18,7 +17,7 @@ export class HomeScreenAction {
   static getSubjects = (rm: string, date: MomentController) => dispatch => {
     dispatch({type: HomeScreenActionConst.FETCH_SUBJECT});
 
-    getSubjectsService(new SubjectsDayRequestModel({rm, date})).then(
+    Services.getSubjectsDay(rm, date).then(
       response =>
         dispatch({
           type: HomeScreenActionConst.RECEIVE_SUBJECT,

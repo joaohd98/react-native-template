@@ -5,5 +5,5 @@ import {RouteStackParamList, RoutesTypes} from "../routes/routes-name";
 export interface PropsGlobal<RouteName extends RoutesTypes> {
   children?: JSX.Element[] | JSX.Element;
   route?: RouteProp<RouteStackParamList, RouteName>;
-  navigation?: StackNavigationProp<RouteStackParamList, RouteName>;
+  navigation?: StackNavigationProp<RouteStackParamList, RouteName> | {push: jest.Mock};
 }
