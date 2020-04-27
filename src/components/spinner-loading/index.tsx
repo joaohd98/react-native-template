@@ -1,5 +1,5 @@
 import React from "react";
-import {CustomImg} from "../../assets/images";
+import {CustomImg} from "../../theme/images";
 import {Animated, Easing} from "react-native";
 
 interface Props {

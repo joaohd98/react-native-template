@@ -1,7 +1,7 @@
 import React from "react";
 import {TryAgainStyles} from "./styles";
 import {TryAgainConst} from "./const";
-import {CustomImg} from "../../assets/images";
+import {CustomImg} from "../../theme/images";
 import {ViewStyle} from "react-native";
 
 interface Props {
