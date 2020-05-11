@@ -5,7 +5,7 @@ import {CustomText} from "../../../../../components/text";
 
 export const LoginScreenFormContainerStyles = {
   ContainerView: styled.View`
-    margin-top: 30%;
+    margin-top: 15%;
   `,
   TitleView: styled(CustomText)`
     font-size: 27px;

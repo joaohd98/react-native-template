@@ -70,6 +70,7 @@ export class Container extends React.Component<Props, State> {
     const {View, KeyboardAvoidingView, ScrollView, ContentView} = ContainerStyle;
     const {children, style, footerContent, footerHeight, isLoading, backgroundColor, scrollEnabled} = this.props;
     const {offset, marginBottom} = this.state;
+    const [isAndroid, isIos] = [Platform.OS === "android", Platform.OS === "ios"];
 
     return (
       <View
@@ -85,8 +86,9 @@ export class Container extends React.Component<Props, State> {
             <ContentView style={style} backgroundColor={backgroundColor} marginBottom={footerHeight}>
               {children}
             </ContentView>
-            {this.getFooterContent()}
+            {isIos && this.getFooterContent()}
           </ScrollView>
+          {isAndroid && this.getFooterContent()}
         </KeyboardAvoidingView>
       </View>
     );
